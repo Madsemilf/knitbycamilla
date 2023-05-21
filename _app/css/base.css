@@ -3,4 +3,6 @@ body {
 	color: var(--color-foreground);
 	font-size: 1.5vw;
 	font-family: 'JetBrains Mono';
+
+	-webkit-font-smoothing: antialiased;
 }
