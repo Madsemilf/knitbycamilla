@@ -1,0 +1,5 @@
+body {
+	background: var(--color-background);
+	color: var(--color-foreground);
+	font-size: 1.5vw;
+}
