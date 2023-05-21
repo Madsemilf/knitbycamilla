@@ -1,14 +1,16 @@
 :root {
 	--color-background: #FF9292;
 	--color-foreground: #FDF7C3;
-	--color-background: #FF9292;
-	--color-box-background: #fff;
+	--color-highlight: #FFE699;
+	--color-box-background: #FFFFFF;
 
-	--first-color: ;
-	--second-color: ;
+	--color-text: #000000;
+	--color-text-darkmode: #FFFFFF;
 	--third-color: ;
 
-	--gap-colum: ;
+	--gap-colum: 1rem;
+	--gap-row: 1rem;
+	--gap-section: 2rem;
 
 
 }
