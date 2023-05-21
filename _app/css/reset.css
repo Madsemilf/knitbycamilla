@@ -8,3 +8,22 @@
 	margin: 0;
 	padding: 0;
 }
+
+img, video, cavas {
+	display: block;
+	width: 100%;
+}
+
+button,
+select {
+	cursor: pointer;
+}
+
+button, 
+input, 
+select {
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border: 0;
+}
