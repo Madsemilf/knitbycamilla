@@ -1,0 +1,7 @@
+.grid {
+	width: 100%;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: flex-start;
+	column-gap: var(--gap-column);
+	row-gap: var(--gap-colum);
+}
