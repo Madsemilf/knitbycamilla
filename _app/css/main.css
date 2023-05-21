@@ -1,6 +1,7 @@
 @import 'reset.css';
 @import 'variables.css';
 @import 'grid.css';
+@import 'fonts.css';
 @import 'base.css';
 
 @import 'modules/header.css'
