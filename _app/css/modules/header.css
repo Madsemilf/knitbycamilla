@@ -2,6 +2,9 @@
 	height: 15rem;
 	background-color: var(--color-foreground);
 	margin-bottom: var(--gap-row);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .header img {
