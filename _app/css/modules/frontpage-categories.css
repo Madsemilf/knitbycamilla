@@ -1,0 +1,34 @@
+.frontpage-categories {
+	margin-bottom: var(--gap-row);
+}
+
+.frontpage-catgories__category {
+	margin: var(--gap-padding);
+	overflow: hidden;
+	position: relative;
+}
+
+.frontpage-catgories-image {
+	overflow: hidden;
+}
+
+.frontpage-categories-image img {
+	transition: transform 0.3s ease;
+	position: relative;
+	z-index: 1;
+}
+
+.frontpage-categories-image img:hover {
+	transform: scale(1.2);
+	z-index: 2; 
+}
+
+.frontpage-catgories__category--button {
+	width: 100%;
+	height: 3vh;
+	background-color: var(--color-highlight);
+	color: var(--color-text);
+	font-size: var(--font-size-normal);
+	position: relative;
+	z-index: 3;
+}
