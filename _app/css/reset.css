@@ -9,6 +9,10 @@
 	padding: 0;
 }
 
+a {
+	color: inherit;
+}
+
 img, video, cavas {
 	display: block;
 	width: 100%;
