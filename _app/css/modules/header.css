@@ -25,6 +25,32 @@
 	position: relative;
 	color: var(--color-text);
 }
+
+/* .header__navigation a span:hover {
+	opacity: 1.5;
+} */
+
+.header__navigation a {
+	font-size: var(--font-size-header);
+}
+
+.header__navigation i {
+	margin-bottom: 1rem;
+}
+
+.navigation__cart-count {
+	display: inline-block;
+	background-color: red;
+	color: var(--color-text-darkmode);
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 1rem;
+	position: absolute;
+	top: -20px;
+	right: 0px;
+}
+
+.navigation__cart-count:hover {
 	text-decoration: none;
 	color: var(--color-text);
 }
