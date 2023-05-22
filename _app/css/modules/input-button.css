@@ -1,0 +1,9 @@
+.input-button {
+	background: var(--color-highlight);
+	text-align: center;
+}
+
+.input-button:hover {
+	background: var(--color-foreground);
+	color: var(--color-background);
+}
