@@ -8,9 +8,18 @@
 	--color-text-darkmode: #FFFFFF;
 	--third-color: ;
 
+	--font-size-small: 1vw;
+	--font-size-normal: 1.5vw;
+	--font-size-normal: 2vw;
+
+	--font-size-header: 1.2vw;
+
 	--gap-colum: 1rem;
+	--gap-padding: 1rem;
 	--gap-row: 1rem;
 	--gap-section: 2rem;
+
+	--gap-box-paddig: 1rem;
 
 
 }
