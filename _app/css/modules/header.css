@@ -16,6 +16,15 @@
 }
 
 .header__navigation a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 5px;
+	position: relative;
+	color: var(--color-text);
+}
 	text-decoration: none;
 	color: var(--color-text);
 }
