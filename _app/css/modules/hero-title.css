@@ -1,5 +1,5 @@
 .hero-title {
-	height: 5vh;
+	height: 5rem;
 	margin-bottom: var(--gap-section);
 	background-color: var(--color-foreground);
 	color: var(--color-text);
