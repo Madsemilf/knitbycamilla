@@ -1,0 +1,35 @@
+.frontpage-information {
+	height: 50vh;
+	margin: 1rem;
+}
+
+.frontpage-information__box {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+   justify-content: center;
+	background: var(--color-foreground);
+}
+
+.frontpage-information-text {
+	color: var(--color-text);
+	margin-top: 5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	font-size: var(--font-size-big);
+}
+
+.frontpage-information-button {
+	height: 10vh;
+	margin: 10rem 2rem;
+   border: 1px solid black;
+	border-radius: 10px;
+   font-size: var(--font-size-normal);
+   color: var(--color-text);
+   background-color: transparent;
+}
+
+.frontpage-information-button:hover {
+	text-decoration: underline;
+}
