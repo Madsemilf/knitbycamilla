@@ -1,5 +1,5 @@
 .header {
-	height: 15rem;
+	height: 7vh;
 	background-color: var(--color-foreground);
 	margin-bottom: var(--gap-section);
 	position: sticky;
@@ -8,7 +8,8 @@
 }
 
 .header img {
-	height: 15rem;
+	height: 7vh;
+	width: 15rem;
 }
 
 .header__navigation {
@@ -25,7 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding: 5px;
+	padding: 0px;
 	position: relative;
 	color: var(--color-text);
 }
@@ -39,7 +40,7 @@
 }
 
 .header__navigation i {
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .navigation__cart-count {
@@ -51,7 +52,7 @@
 	font-size: 1rem;
 	position: absolute;
 	top: -20px;
-	right: 0px;
+	right: -10px;
 }
 
 .navigation__cart-count:hover {
