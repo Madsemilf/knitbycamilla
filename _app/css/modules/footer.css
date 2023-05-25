@@ -1,0 +1,12 @@
+.footer-container {
+	height: 3rem;
+	background-color: var(--color-foreground);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: var(--gap-section);
+}
+
+.footer-text {
+	color: var(--color-text);
+}
