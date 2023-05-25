@@ -1,4 +1,5 @@
 .box {
 	background: var(--color-box-background);
-	color: var(--color-box-foreground);
+	color: var(--color-box-text);
+	padding: var(--gap-box-padding);
 }
