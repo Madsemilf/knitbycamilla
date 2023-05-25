@@ -2,7 +2,7 @@
 	height: 3rem;
 	background-color: var(--color-foreground);
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	margin-top: var(--gap-section);
 }
