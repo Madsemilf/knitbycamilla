@@ -29,6 +29,7 @@ input,
 select {
 	font: inherit;
 	color: inherit;
+	text-transform: uppercase;
 	background: transparent;
 	border: 0;
 }
