@@ -1,18 +1,22 @@
 .frontpage-categories {
+	height: 40vh;
 	margin-bottom: var(--gap-row);
 }
 
 .frontpage-catgories__category {
+	height: 100%;
 	margin: var(--gap-padding);
 	overflow: hidden;
 	position: relative;
 }
 
-.frontpage-catgories-image {
+.frontpage-categories-image {
+	height: 80%;
 	overflow: hidden;
 }
 
 .frontpage-categories-image img {
+	height: 100%;
 	transition: transform 0.3s ease;
 	position: relative;
 	z-index: 1;
@@ -25,10 +29,18 @@
 
 .frontpage-catgories__category--button {
 	width: 100%;
-	height: 3vh;
+	height: 5rem;
 	background-color: var(--color-highlight);
 	color: var(--color-text);
 	font-size: var(--font-size-normal);
 	position: relative;
 	z-index: 3;
+	overflow: hidden;
+	transition: color 0.5s ease;
 }
+
+.frontpage-catgories__category--button:hover {
+	text-decoration: underline;
+}
+
+
