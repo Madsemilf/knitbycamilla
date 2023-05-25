@@ -1,9 +1,10 @@
 .input-button {
 	background: var(--color-highlight);
 	text-align: center;
+	width: 100%;
+	padding: var(--gap-button-padding);
 }
 
 .input-button:hover {
-	background: var(--color-foreground);
-	color: var(--color-background);
+	background: var(--color-background);
 }
