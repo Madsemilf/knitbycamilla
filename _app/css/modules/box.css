@@ -1,0 +1,4 @@
+.box {
+	background: var(--color-box-background);
+	color: var(--color-box-foreground);
+}
