@@ -1,7 +1,7 @@
 .header {
 	height: 15rem;
 	background-color: var(--color-foreground);
-	margin-bottom: var(--gap-row);
+	margin-bottom: var(--gap-section);
 	position: sticky;
 	top: 0;
 	z-index: 100;
