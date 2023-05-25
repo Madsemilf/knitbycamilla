@@ -1,8 +1,7 @@
 .frontpage-information {
 	height: 40%;
-	margin-right: 1rem;
-	margin-left: 1rem;
 	margin-bottom: 5vh;
+	padding: var(--gap-padding);
 }
 
 .frontpage-information-box {
