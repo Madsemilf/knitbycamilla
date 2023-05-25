@@ -1,5 +1,5 @@
 .header {
-	height: 7vh;
+	height: 5.5rem;
 	background-color: var(--color-foreground);
 	margin-bottom: var(--gap-section);
 	position: sticky;
@@ -8,7 +8,7 @@
 }
 
 .header img {
-	height: 7vh;
+	height: 5.5rem;
 	width: 15rem;
 }
 
