@@ -3,10 +3,16 @@ body {
 	color: var(--color-foreground);
 	font-size: 1.5vw;
 	font-family: 'JetBrains Mono';
-	
+	/* overflow: hidden; */
 	-webkit-font-smoothing: antialiased;
 }
 
 a span:hover {
 	text-decoration: underline;
+}
+
+.frontpage-split-line {
+	border: none;
+   border-top: 1px dotted rgb(54, 53, 53);
+   margin: var(--gap-section);
 }
