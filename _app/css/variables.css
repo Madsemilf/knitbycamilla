@@ -2,7 +2,9 @@
 	--color-background: #FF9292;
 	--color-foreground: #FDF7C3;
 	--color-highlight: #FFE699;
+
 	--color-box-background: #FFFFFF;
+	--color-box-foreground: var(--color-foreground);
 
 	--color-text: #000000;
 	--color-text-darkmode: #FFFFFF;
@@ -10,7 +12,7 @@
 
 	--font-size-small: 1vw;
 	--font-size-normal: 1.5vw;
-	--font-size-normal: 2vw;
+	--font-size-big: 2vw;
 
 	--font-size-header: 1.2vw;
 
