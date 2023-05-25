@@ -1,9 +1,11 @@
 .frontpage-information {
-	height: 50vh;
-	margin: 1rem;
+	height: 40%;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	margin-bottom: 5vh;
 }
 
-.frontpage-information__box {
+.frontpage-information-box {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -32,4 +34,12 @@
 
 .frontpage-information-button:hover {
 	text-decoration: underline;
+}
+
+.frontpage-information-image {
+	height: 100%;
+}
+
+.frontpage-information-image img {
+	height: 100%;
 }
