@@ -102,6 +102,7 @@
   
 	 .header__logo-slogan {
 		font-size: 14px;
+		text-align: end;
 		margin: 0;
 	 }
 
