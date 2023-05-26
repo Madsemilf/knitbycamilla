@@ -82,7 +82,7 @@
 		display: none;
 	}
 	.header__navigation {
-		gap: 1rem;
+		gap: 1.5rem;
 		padding-right: 1.5rem;
 	}
 	.header__navigation a {
