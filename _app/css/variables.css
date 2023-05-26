@@ -1,6 +1,6 @@
 :root {
-	--color-background: #FF9292;
-	--color-foreground: #FDF7C3;
+	--color-background: #FDF7C3;
+	--color-foreground: #E8E0A9;
 	--color-highlight: #fec924;
 	--color-button-hover: #FF9292;
 
@@ -11,11 +11,11 @@
 	--color-text-darkmode: #FFFFFF;
 	--third-color: ;
 
-	--font-size-small: 1vw;
-	--font-size-normal: 1.5vw;
-	--font-size-big: 2vw;
+	--font-size-small: 1rem;
+	--font-size-normal: 1.5rem;
+	--font-size-big: 2rem;
 
-	--font-size-header: 1.2vw;
+	--font-size-header: 1rem;
 
 	--gap-column: 1rem;
 	--gap-padding: 1rem;
@@ -26,6 +26,4 @@
 
 	--gap-box-padding: 1rem;
 	--gap-button-padding: 1rem;
-
-
 }

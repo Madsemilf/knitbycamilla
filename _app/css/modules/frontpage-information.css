@@ -1,5 +1,5 @@
 .frontpage-information {
-	height: 40%;
+	height: 50%;
 	margin-bottom: 5vh;
 	padding: var(--gap-padding);
 }
@@ -11,24 +11,34 @@
 	flex-direction: column;
    justify-content: center;
 	background: var(--color-foreground);
+	position: relative;
 }
 
 .frontpage-information-text {
+	height: 50%;
+	width: 80%;
+	top: 10%;
+	left: 50%;
+   transform: translateX(-50%);
+	text-align: center;
 	color: var(--color-text);
-	margin-top: 5rem;
-	margin-left: 1rem;
-	margin-right: 1rem;
-	font-size: var(--font-size-big);
+	font-size: 1.5vh;
+	overflow: hidden;
+	position: absolute;
 }
 
 .frontpage-information-button {
-	height: 10vh;
-	margin: 10rem 2rem;
+	height: 10rem;
+	width: 80%;
    border: 1px solid black;
 	border-radius: 10px;
-   font-size: var(--font-size-normal);
+   font-size: var(--font-size-small);
    color: var(--color-text);
    background-color: transparent;
+	position: absolute;
+	bottom: 5rem;
+	left: 50%;
+   transform: translateX(-50%);
 }
 
 .frontpage-information-button:hover {

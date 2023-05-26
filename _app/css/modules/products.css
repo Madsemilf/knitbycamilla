@@ -1,4 +1,5 @@
 .products {
+	height: 100vh;
 	gap: var(--gap-column);
 	padding: var(--gap-padding-large);
 }
