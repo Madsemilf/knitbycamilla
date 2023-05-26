@@ -82,8 +82,8 @@
 		display: none;
 	}
 	.header__navigation {
-		gap: 1.2rem;
-		padding-right: 3rem;
+		gap: 1rem;
+		padding-right: 1.5rem;
 	}
 	.header__navigation a {
 		font-size: 1rem;
@@ -112,7 +112,7 @@
 	 .navigation__cart-count {
 		font-size: 1rem;
 		position: absolute;
-		top: -15px;
+		top: -20px;
 		right: -20px;
 	 }
 
