@@ -71,11 +71,7 @@
 	.header {
 		height: 5rem;
 		display: flex;
-		background-color: var(--color-foreground);
-		margin-bottom: var(--gap-section);
-		position: sticky;
-		top: 0;
-		z-index: 100;
+		gap: 0;
 	}
 	.header img {
 		display: none;
