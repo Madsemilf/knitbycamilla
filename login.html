@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>knitByCamilla's Home page</title>
+		<meta name="description" content="This is knitByCamilla">
+		<meta name="theme-color" content="">
+
+		<link rel="icon" href="/_app/assets/favicon.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		
+		<link rel="stylesheet" href="/_app/css/main.css">
+		<script type="module" src="/_app/js/main.js"></script>
+	</head>
+
+	
+	<body>
+		<!-- Header section -->
+		<header class="grid header">
+			<div class="grid__column--4">
+				<a href="index.html"><img src="/_app/assets/images/knitbycamilla-logo.png" alt="This is knitbycamilla's logo"></a>
+				<a href="index.html" class="header__logo">
+					<h1 class="header__logo-text">knitByCamilla</h1>
+					<p class="header__logo-slogan">stitching dreams</p>
+				</a>
+			</div>
+			<!-- Navigation -->
+			<nav class="grid__column--8 header__navigation">
+				<a href="/">
+					<i class="fas fa-book"></i>
+					<span>RECEPIES</span>
+				</a>
+				<a href="/">
+					<i class="fas fa-tshirt"></i> 
+					<span>STORE</span> 
+				</a>
+				<a href="/">
+					<i class="fas fa-lightbulb"></i>
+					<span>INSPIRATION</span> 
+				</a>
+				<a href="/">
+					<i class="fas fa-sign-in-alt"></i>
+					<span>SIGN IN</span> 
+				</a>
+				<a href="/" id="navigation__cart-link" class="navigation__cart-link navigation__cart--empty">
+					<i class="fas fa-shopping-cart"></i>
+					<span class="navigation__cart-count navigation__cart-no-items">0</span>
+					<span>CART</span>
+				</a>
+			</nav>
+		</header>
+
+		<section class="login">
+			<h2 class="login-title">Sign in</h2>
+			<form class="login-form">
+				<div class="login-input">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email" required>
+				</div>
+
+				<div class="login-input">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" placeholder="Enter your password" required>
+				</div>
+
+				<div class="login-input">
+					<button class="login-button" type="submit">Login</button>
+				</div>
+				
+				<p class="login-not-a-user">Not a user? <a href="singup.html">Click here to sign up</a></p>
+			</form>
+		</section>
+
+		<!-- Footer section -->
+		<footer class="grid footer">
+			<div class="grid__column--12 footer-container">
+				<p class="footer-text">support@knitbycamilla.com</p>
+				<p class="footer-text">Follow KnitByCamilla on</p>
+			</div>
+			<!-- <div class="grid__column--6 footer-container">
+				<p class="footer-text">Follow KnitByCamilla on</p>
+			</div> -->
+		</footer>
+	</body>
+</html>
