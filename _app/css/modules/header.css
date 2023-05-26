@@ -93,15 +93,11 @@
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: end;
-		padding-left: var(--gap-padding);
 		font-family: 'Caveat', cursive;;
 	}  
 	 .header__logo-text {
 		font-size: 30px;
 		font-weight: bold;
-		margin-bottom: -8px;
 	 }
   
 	 .header__logo-slogan {
@@ -118,6 +114,10 @@
 
 	 .header__navigation a span:not(.navigation__cart-count) {
 		display: none;
+	 }
+
+	 .header div:first-child {
+		height: 100%;
 	 }
 }
 
