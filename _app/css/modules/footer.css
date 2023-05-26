@@ -10,3 +10,30 @@
 .footer-text {
 	color: var(--color-text);
 }
+
+@media (max-width: 768px) {
+	.footer {
+		display: flex;
+	}
+	.footer-container {
+	  flex-direction: column;
+	  justify-content: center;
+	  text-align: center;
+	  height: auto;
+	  padding: 1rem;
+	  width: 100%;
+	}
+ 
+	.footer-text {
+	  display: inline-block;
+	  margin-bottom: 1vh;
+	}
+ 
+	.footer-icons {
+	  margin-top: 1rem;
+	}
+ 
+	.footer-icons a {
+	  margin-right: 1rem;
+	}
+ }
