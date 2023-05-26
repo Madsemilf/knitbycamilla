@@ -15,5 +15,14 @@
 	height: 100%;
 }
 
+@media (max-width: 768px) {
+	.frontpage-hero-images {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		aspect-ratio: 3/4;
+	}
+
+}
 
 
