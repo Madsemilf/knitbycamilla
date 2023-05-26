@@ -20,9 +20,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		aspect-ratio: 3/4;
 	}
-
+	.frontpage-hero-image {
+		width: 100%;
+	}
 }
 
 
