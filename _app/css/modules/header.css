@@ -87,10 +87,6 @@
 		gap: 0;
 	}
 	
-	.header img {
-		display: none;
-	}
-	
 	.header__navigation {
 		gap: 1.5rem;
 		padding-right: 1.5rem;
@@ -116,8 +112,6 @@
   
 	.header__logo-slogan {
 		font-size: 16px;
-		text-align: center;
-		margin: 0;
 	}
 
 	.navigation__cart-count {
