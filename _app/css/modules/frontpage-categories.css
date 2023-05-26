@@ -44,4 +44,17 @@
 	text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+	.frontpage-categories {
+		display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	gap: 1rem;
+	}
+	.frontpage-catgories__category {
+		width: calc(50% - 1rem);
+		margin-bottom: 1vh;
+	}
+}
+
 

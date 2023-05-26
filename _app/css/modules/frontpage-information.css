@@ -9,7 +9,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-   justify-content: center;
+	justify-content: center;
 	background: var(--color-foreground);
 	position: relative;
 }
@@ -19,7 +19,7 @@
 	width: 80%;
 	top: 10%;
 	left: 50%;
-   transform: translateX(-50%);
+	transform: translateX(-50%);
 	text-align: center;
 	color: var(--color-text);
 	font-size: 1.5vh;
@@ -30,15 +30,15 @@
 .frontpage-information-button {
 	height: 10rem;
 	width: 80%;
-   border: 1px solid black;
+	border: 1px solid black;
 	border-radius: 10px;
-   font-size: var(--font-size-small);
-   color: var(--color-text);
-   background-color: transparent;
+	font-size: var(--font-size-small);
+	color: var(--color-text);
+	background-color: transparent;
 	position: absolute;
 	bottom: 5rem;
 	left: 50%;
-   transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .frontpage-information-button:hover {
@@ -51,4 +51,40 @@
 
 .frontpage-information-image img {
 	height: 100%;
+}
+
+@media (max-width: 768px) {
+	.frontpage-information {
+		display: flex;
+		justify-content: center;
+		height: auto;
+		padding: 2rem;
+		flex-direction: column-reverse;
+	}
+	
+	.frontpage-information-box {
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		position: relative;
+	}
+	
+	.frontpage-information-text {
+		top: unset;
+		left: unset;
+		transform: unset;
+		position: relative;
+	}
+	
+	.frontpage-information-button {
+		position: relative;
+		transform: unset;
+		bottom: unset;
+		left: unset;
+		margin-top: 2rem;
+	}
 }
