@@ -43,7 +43,6 @@
  
  .signup-button {
 	background-color: var(--color-highlight);
-	color: var(--color-text-darkmode);
 	padding: var(--gap-button-padding);
 	font-size: var(--font-size-normal);
 	border: none;
@@ -53,7 +52,6 @@
  
  .signup-button:hover {
 	background-color: var(--color-foreground);
-	color: var(--color-text);
  }
  
  .signup-account {
