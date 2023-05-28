@@ -24,6 +24,31 @@ Thumbs.db
 
 /.sanity
 /dist
+/sanity/.next/
+/sanity/build/
+/sanity/dist/
+/sanity/node_modules/
+/sanity/.env*
+
+# Ignore Sanity Studio specific files
+/sanity/studio/node_modules/
+/sanity/studio/dist/
+/sanity/studio/.env*
+
+# Ignore Sanity dataset files
+/sanity/datasets/
+
+# Ignore Sanity deployment files (if applicable)
+/sanity/deployments/
+
+# Ignore Sanity logs
+/sanity/logs/
+
+# Ignore other environment-specific files or directories (modify as needed)
+/sanity/.sanity/
+
+# Ignore npm package-lock files (if not using yarn)
+package-lock.json
 
 # Ignore dependencies and package managers
 /node_modules/
