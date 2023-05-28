@@ -43,13 +43,28 @@
 					<i class="fas fa-sign-in-alt"></i>
 					<span>SIGN IN</span> 
 				</a>
-				<a href="/" id="navigation__cart-link" class="navigation__cart-link navigation__cart--empty">
+				<button id="navigation-cart-button" class="navigation__cart-button">
 					<i class="fas fa-shopping-cart"></i>
 					<span class="navigation__cart-count navigation__cart-no-items">0</span>
 					<span>CART</span>
-				</a>
+				</button>
 			</nav>
 		</header>
+
+		<!-- Cart box -->
+		<section class="cart-box cart-box--hide" id="cart-box">
+			<div class="cart-box__content">
+				 <h2 class="cart-box__title">Cart Items</h2>
+				 <div class="cart-box__items" id="cart-items">
+					  <div>1 Cumulus sweater 100 NOK</div>
+					  <div>1 Cumulus sweater 100 NOK</div>
+					  <div>1 Cumulus sweater 100 NOK</div>
+				 </div>
+				 <p class="cart-box__empty-message" id="cart-empty-message">Your cart is empty</p>
+				 <button class="cart-box__button">checkout</button>
+				 <!-- <button class="cart-box__button-empty">empty cart</button> -->
+			</div>
+	  </section>
 
 		<!-- Hero title -->
 		<section class="hero-title grid">
