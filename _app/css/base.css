@@ -21,3 +21,17 @@ a span:hover {
 	padding: 2rem;
    
 }
+
+@media (max-width: 1024px) {
+	body {
+		font-size: 5vw;
+	}
+}
+
+@media (min-width: 1920px) {
+	body {
+		font-size: 30px;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+}
