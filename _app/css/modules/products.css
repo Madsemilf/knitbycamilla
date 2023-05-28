@@ -2,6 +2,7 @@
 	height: 100vh;
 	gap: var(--gap-column);
 	padding: var(--gap-padding-large);
+	margin-bottom: var(--gap-row);
 }
 
 .products__product-information {
