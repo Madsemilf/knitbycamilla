@@ -4,9 +4,9 @@ import { visionTool } from '@sanity/vision';
 import schemas from './schemas/schemas.js';
 
 export default {
-	title: 'Studio',
+	title: 'knitByCamilla',
 
-	projectId: 'qa1aozv8',
+	projectId: '40xf8jbi',
 	dataset: 'production',
 
 	plugins: [deskTool(), visionTool()],
