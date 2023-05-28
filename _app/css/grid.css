@@ -7,6 +7,27 @@
 	row-gap: var(--gap-row);
 }
 
+[class*="grid__column--"] {
+	grid-column-end: span 12;
+}
+
+@media (max-width: 1024px) {
+	.grid__column--1, 
+	.grid__column--2,
+	.grid__column--3,
+	.grid__column--4,
+	.grid__column--5,
+	.grid__column--6,
+	.grid__column--7,
+	.grid__column--8,
+	.grid__column--9,
+	.grid__column--10,
+	.grid__column--11,
+	.grid__column--12 {
+		grid-column-end: span 12;
+	}
+}
+
 @media (min-width: 1024px) {
 	.grid__column--1 {
 		grid-column-end: span 1;
