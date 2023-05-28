@@ -6,71 +6,69 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: -10rem;
- }
+}
 
- .login-form {
+.login-form {
 	width: 50%;
- }
- 
- .login-input {
+}
+
+.login-input {
 	color: var(--color-text);
 	padding: var(--gap-box-padding);
 	border-radius: 5px;
- }
- 
- .login-input h2 {
+}
+
+.login-input h2 {
 	margin-top: 0;
- }
- 
- .login-input {
+}
+
+.login-input {
 	margin-bottom: var(--gap-padding);
- }
- 
- .login-input label {
+}
+
+.login-input label {
 	display: block;
 	margin-bottom: 0.5rem;
- }
- 
- input[type="text"],
- input[type="email"],
- input[type="password"] {
+}
+
+input [type="text"],
+input [type="email"],
+input[type="password"] {
 	width: 100%;
 	padding: var(--gap-padding);
 	font-size: var(--font-size-normal);
 	border-radius: 3px;
 	border: 1px solid var(--color-foreground);
- }
- 
- .login-button {
+}
+
+.login-button {
 	background-color: var(--color-highlight);
-	color: var(--color-text-darkmode);
 	padding: var(--gap-button-padding);
 	font-size: var(--font-size-normal);
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
- }
- 
- .login-button:hover {
+}
+
+.login-button:hover {
 	background-color: var(--color-foreground);
-	color: var(--color-text);
- }
- 
- .login-not-a-user {
+}
+
+.login-not-a-user {
 	font-size: var(--font-size-small);
 	text-align: center;
- }
+}
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
 	.login-form {
-	  padding: var(--gap-padding);
+		padding: var(--gap-padding);
 	}
- 
+	
 	input[type="text"],
 	input[type="email"],
 	input[type="password"],
 	.login-button {
-	  font-size: var(--font-size-small);
-	  padding: var(--gap-padding-small);
+		font-size: var(--font-size-small);
+		padding: var(--gap-padding-small);
 	}
- }
+}
