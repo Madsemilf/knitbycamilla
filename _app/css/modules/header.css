@@ -49,17 +49,21 @@
 	color: var(--color-text);
 }
 
-/* .header__navigation a span:hover {
-	opacity: 1.5;
-} */
-
 .header__navigation a {
 	font-size: var(--font-size-header);
 }
 
 .header__navigation i {
 	margin-bottom: 0.5rem;
-	
+}
+
+.navigation__cart-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--font-size-header);
+	position: relative;
 }
 
 .navigation__cart-count {
@@ -123,6 +127,10 @@
 	}
 
 	.header__navigation a span:not(.navigation__cart-count) {
+		display: none;
+	}
+
+	.header__navigation button span:not(.navigation__cart-count) {
 		display: none;
 	}
 
