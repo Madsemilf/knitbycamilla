@@ -1,9 +1,9 @@
 import settings from './documents/settings.js';
-import product from './documents/product.js';
+import pattern from './documents/pattern.js';
 import category from './documents/category.js';
 
 export default [
 	settings,
-	product,
+	pattern,
 	category,
 ]
