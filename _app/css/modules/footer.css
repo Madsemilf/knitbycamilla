@@ -2,12 +2,10 @@
 	height: 3rem;
 	background-color: var(--color-foreground);
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: var(--gap-section);
 	flex-direction: column;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
+	margin-top: var(--gap-section);
 	height: auto;
 	padding: 1rem;
 	width: 100%;
