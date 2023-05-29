@@ -26,6 +26,11 @@ export default function CartItems() {
 		emptyCart();
 		render();
 	}
+	// function handleCartCheckoutButtonClick() {
+	// 	checkout();
+	// 	render();
+	// }
+	
 	function addToCart(button) {
 		const clickedButtonDataset = button.parentNode.dataset;
 		const product = {
@@ -36,3 +41,10 @@ export default function CartItems() {
 		}
 		
 		const matchInCart = cartProducts.find(product => product.id === clickedButtonDataset.id)
+
+		if(matchInCart) {
+			matchInCart.quantity += 1;
+		} else {
+			cartProducts.push(product);
+		}
+	}
