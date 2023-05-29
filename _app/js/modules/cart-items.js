@@ -6,6 +6,11 @@ export default function CartItems() {
 	const cartEmptyButton = document.querySelector('.cart-box__button--empty');
 	const cartCheckoutButton = document.querySelector('.cart-box__checkout-button');
 
+	addToCartButtons.forEach(button => {
+		button.addEventListener('click', handleAddToCartButtonClick);
+	});
+	
+	cartEmptyButton.addEventListener('click', handleCartEmptyButtonClick);
 	function addToCart(button) {
 		const clickedButtonDataset = button.parentNode.dataset;
 		const product = {
