@@ -1,3 +1,4 @@
+export default function CartItems() {
 	const cartContainer = document.querySelector('.cart-box')
 	const emptyCartMessage = document.querySelector('.cart-box__empty-message--visible')
 	const cartBoxContent = document.querySelector('.cart-box__content');
