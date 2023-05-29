@@ -26,10 +26,23 @@
 			</div>
 			<!-- Navigation -->
 			<nav class="grid__column--6 header__navigation">
-				<a href="/">
-					<i class="fas fa-book"></i>
-					<span>PATTERN</span>
-				</a>
+				<div class="navigation__dropdown">
+					<a href="/pattern/index.html" class="navigation__pattern-link">
+					  <div class="navigation__pattern-icon">
+						 <i class="fas fa-book"></i>
+					  </div>
+					  <div class="navigation__pattern-text">
+						 <span>PATTERN</span>
+						 <i class="fas fa-chevron-down"></i>
+					  </div>
+					</a>
+					<ul class="navigation__dropdown-pattern">
+					  <li><a href="/pattern/jackets.html">Jackets</a></li>
+					  <li><a href="/pattern/sweaters.html">Sweaters</a></li>
+					  <li><a href="/pattern/vests.html">Vests</a></li>
+					  <li><a href="/pattern/accessories.html">Accessories</a></li>
+					</ul>
+				 </div>
 				<a href="/">
 					<i class="fas fa-tshirt"></i> 
 					<span>SHOP</span> 
@@ -137,7 +150,7 @@
 		</section>
 
 		<!-- Footer section -->
-		<footer class="grid footer">
+		<footer class="grid footer footer-visible">
 			<div class="grid__column--12 footer-container">
 			  <p class="footer-text">Follow <b>KnitByCamilla</b> on</p>
 			  <div class="footer-icons">
