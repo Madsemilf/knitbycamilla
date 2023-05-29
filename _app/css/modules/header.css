@@ -34,8 +34,8 @@
 	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
-   align-items: flex-end;
-   padding: 10px;
+	align-items: flex-end;
+	padding: 10px;
 }
 
 .header__navigation a {
@@ -82,6 +82,59 @@
 	text-decoration: none;
 }
 
+.navigation__dropdown {
+	position: relative;
+	top: 0.4rem;
+}
+
+.navigation__pattern-link {
+	display: flex;
+	align-items: center;
+ }
+
+ .navigation__pattern-icon {
+	margin-right: 1.5rem;
+ }
+ 
+ .navigation__pattern-text {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+ }
+ 
+ .navigation__pattern-text span {
+	margin-bottom: 5px;
+ }
+
+.navigation__dropdown-pattern {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -70%;
+	z-index: 100;
+	background-color: var(--color-background);
+	list-style: none;
+}
+
+.navigation__dropdown:hover .navigation__dropdown-pattern {
+	display: block;
+}
+
+.navigation__dropdown-pattern li {
+	margin: 1.5rem;
+}
+
+.navigation__dropdown-pattern a {
+	display: block;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+.navigation__dropdown-pattern a:hover {
+	transform: scale(1.2);
+	font-weight: bold;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 768px) {
@@ -114,28 +167,68 @@
 		font-size: 26px;
 		font-weight: bold;
 	}
-  
+	
 	.header__logo-slogan {
 		font-size: 16px;
 	}
-
+	
 	.navigation__cart-count {
 		font-size: 1rem;
 		position: absolute;
 		top: -20px;
 		right: -20px;
 	}
-
+	
 	.header__navigation a span:not(.navigation__cart-count) {
 		display: none;
 	}
-
+	
 	.header__navigation button span:not(.navigation__cart-count) {
 		display: none;
 	}
-
+	
 	.header div:first-child {
-		height: 100%;
+		
 	}
+
+	.navigation__dropdown {
+		top: 1.2rem;
+		left: 1.2rem;
+	}
+
+	.navigation__pattern-text {
+		display: none;
+	}
+	
+	.navigation__pattern-link {
+		display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: relative;
+	}
+
+	.navigation__pattern-link span {
+		margin-right: 10px;
+	 }
+	
+	.navigation__dropdown-pattern li {
+		margin: 1.5rem;
+	 }
+  
+	 .navigation__dropdown-pattern a {
+		display: block;
+		text-decoration: none;
+		font-size: 1.5rem;
+	 }
+  
+	 .navigation__dropdown-pattern a:hover {
+		transform: scale(1.2);
+		font-weight: bold;
+	 }
+  
+	 .navigation__dropdown:focus-within .navigation__dropdown-pattern {
+		display: block;
+	 }
 }
 
