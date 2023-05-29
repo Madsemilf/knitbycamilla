@@ -14,28 +14,30 @@ export default async function FrontpageCategories () {
 
 	console.log(categories);
 
-	function createCategoryImageDOM(category) {
+	if (document.body.classList.contains('home-page')) {
+		function createCategoryImageDOM(category) {
 
-		return `<div class="frontpage-catgories__category grid__column--3" data-name:"${category.name}">
-		<a href="index.html" class="frontpage-categories-link">
-		<button class="frontpage-categories-image">
-			<img src="${category.preview.asset.url}" alt="">
-		</button>
-		<div>
-			<button class="frontpage-catgories__category--button">${category.name}</button>
-		</div>
-		</a>
-	</div>`
-	}
-
-
-	function renderCategoryImages () {
-		for (const category of categories) {
-			const categoryItem = createCategoryImageDOM(category);
-			// categoryContainer.appendChild(categoryItem)
-
-			categoryContainer.innerHTML += categoryItem;
+			return `<div class="frontpage-catgories__category grid__column--3" data-name:"${category.name}">
+			<a href="index.html" class="frontpage-categories-link">
+			<button class="frontpage-categories-image">
+				<img src="${category.preview.asset.url}" alt="">
+			</button>
+			<div>
+				<button class="frontpage-catgories__category--button">${category.name}</button>
+			</div>
+			</a>
+		</div>`
 		}
+	
+	
+		function renderCategoryImages () {
+			for (const category of categories) {
+				const categoryItem = createCategoryImageDOM(category);
+				// categoryContainer.appendChild(categoryItem)
+	
+				categoryContainer.innerHTML += categoryItem;
+			}
+		}
+		renderCategoryImages();
 	}
-	renderCategoryImages();
 }
