@@ -204,10 +204,12 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		gap: 1rem;
 	}
 
 	.navigation__pattern-link {
-		top: 0;
+		top: 1px;
+		left: 20px;
 	}
 	
 	.navigation__pattern-text {
