@@ -12,4 +12,4 @@ CartItems ();
 FrontpageCategories ();
 FrontpageHeroImages ();
 FrontpageInformationImage ();
-PatternProducts ();
+await PatternProducts ();
