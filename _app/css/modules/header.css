@@ -204,7 +204,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		gap: 1.5rem;
+		gap: 1rem;
 	}
 
 	.navigation__pattern-link {
