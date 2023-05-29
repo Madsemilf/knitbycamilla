@@ -20,20 +20,26 @@
 		<!-- Header section -->
 		<header class="grid header">
 			<div class="grid__column--6 header__logo-container">
-				<a href="index.html" class="header__logo">
+				<a href="/index.html" class="header__logo">
 					<h1 class="header__logo-text">knitByCamilla</h1>
 					<p class="header__logo-slogan">stitching dreams</p>
 				</a>
 			</div>
 			<!-- Navigation -->
 			<nav class="grid__column--6 header__navigation">
-				<a href="/">
+				<a href="/pattern/index.html" class="pattern-link">
 					<i class="fas fa-book"></i>
-					<span>RECEPIES</span>
+					<span>PATTERN</span>
+					<ul class="dropdown-pattern">
+						<li><a href="/pattern/jackets.html">Jackets</a></li>
+						<li><a href="/pattern/sweaters.html">Sweaters</a></li>
+						<li><a href="/pattern/vests.html">Vests</a></li>
+						<li><a href="/pattern/accessories.html">Accessories</a></li>
+					 </ul>
 				</a>
 				<a href="/">
 					<i class="fas fa-tshirt"></i> 
-					<span>STORE</span> 
+					<span>SHOP</span> 
 				</a>
 				<a href="/">
 					<i class="fas fa-lightbulb"></i>
@@ -43,45 +49,40 @@
 					<i class="fas fa-sign-in-alt"></i>
 					<span>SIGN IN</span> 
 				</a>
-				<a href="/" id="navigation__cart-link" class="navigation__cart-link navigation__cart--empty">
+				<button id="navigation-cart-button" class="navigation__cart-button">
 					<i class="fas fa-shopping-cart"></i>
 					<span class="navigation__cart-count navigation__cart-no-items">0</span>
 					<span>CART</span>
-				</a>
+				</button>
 			</nav>
 		</header>
+
+		<!-- Cart box -->
+		<section class="cart-box cart-box--hide" id="cart-box">
+			<div class="cart-box__content">
+				 <h2 class="cart-box__title">Cart Items</h2>
+				 <div class="cart-box__items" id="cart-items">
+					  <div>1 Cumulus sweater 100 NOK</div>
+					  <div>1 Cumulus sweater 100 NOK</div>
+					  <div>1 Cumulus sweater 100 NOK</div>
+				 </div>
+				 <p class="cart-box__empty-message" id="cart-empty-message">Your cart is empty</p>
+				 <button class="cart-box__button">checkout</button>
+				 <!-- <button class="cart-box__button-empty">empty cart</button> -->
+			</div>
+	  </section>
+
 
 		<!-- Hero title -->
 		<section class="hero-title grid">
 			<div class="grid__column--12">
-				<h1>FIND SOMETHING YOU WOULD LOVE TO KNIT OR WEAR, JOIN US IN CREATING A KNITTING WORLD</h1>
+				<h1>FIND SOMETHING YOU WOULD LOVE TO KNIT. JOIN US IN CREATING A KNITTING WORLD!</h1>
 			</div>
 		</section>
 
 		<!-- Product section -->
-		<section class="products grid">
-			<div class="products__product box grid__column--4" data-id="" data-name="Cumulus Bluse" data-price="100">
-				<div class="products__product-image">
-					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
-				</div>
-
-				<div class="products__product-information">
-					<div class="products__product-name">Cumulus Bluse </div>
-					<div class="products__product-price">100 NOK</div>
-				</div>
-
-				<!-- <div>
-					<div class="products__product-sizes">
-						<button class="products__product-size">S</button>
-						<button class="products__product-size">M</button>
-						<button class="products__product-size">L</button>
-					</div>
-				</div> -->
-
-				<button class="products__product-add-to-cart input-button">Add to Cart</button>
-			</div>
-
-			<div class="products__product box grid__column--4">
+		<section class="products grid" id="pattern-products">
+			<!-- <div class="products__product box grid__column--4" data-id="${product_document._id}" data-name="${product_document.name}" data-price="${product_document.price}">
 				<div class="products__product-image">
 					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
 				</div>
@@ -106,9 +107,22 @@
 
 				<button class="products__product-add-to-cart input-button">Add to Cart</button>
 			</div>
+
+			<div class="products__product box grid__column--4">
+				<div class="products__product-image">
+					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
+				</div>
+
+				<div class="products__product-information">
+					<div class="products__product-name">Cumulus Bluse </div>
+					<div class="products__product-price">100 NOK</div>
+				</div>
+
+				<button class="products__product-add-to-cart input-button">Add to Cart</button>
+			</div> -->
 		</section>
 
-		<!-- Footer section -->
+		<!-- Footer section
 		<footer class="grid footer">
 			<div class="grid__column--12 footer-container">
 			  <p class="footer-text">Follow <b>KnitByCamilla</b> on</p>
@@ -118,6 +132,6 @@
 				 <a href="#"><i class="fab fa-facebook"></i></a>
 			  </div>
 			</div>
-		 </footer>
+		 </footer> -->
 	</body>
 </html>
