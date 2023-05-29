@@ -26,6 +26,7 @@ export default function CartItems() {
 		emptyCart();
 		render();
 	}
+	
 	// function handleCartCheckoutButtonClick() {
 	// 	checkout();
 	// 	render();
@@ -47,4 +48,8 @@ export default function CartItems() {
 		} else {
 			cartProducts.push(product);
 		}
+	}
+
+	function emptyCart() {
+		cartProducts = [];
 	}
