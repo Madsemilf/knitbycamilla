@@ -188,8 +188,8 @@
 	.navigation__cart-count {
 		font-size: 1rem;
 		position: absolute;
-		top: -20px;
-		right: -20px;
+		top: -25px;
+		right: -5px;
 	}
 	
 	.header__navigation a span:not(.navigation__cart-count) {
@@ -204,7 +204,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 
 	.navigation__pattern-link {
