@@ -6,6 +6,7 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: var(--gap-section);
+	margin-top: 20vw;
 	height: auto;
 	padding: 1rem;
 	width: 100%;
