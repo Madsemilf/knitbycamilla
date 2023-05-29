@@ -1,4 +1,4 @@
-export default function cartItems() {
+export default function CartItems() {
 
 	let cartBoxVisible = false;
 
