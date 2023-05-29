@@ -1,4 +1,6 @@
 export default function CartItems() {
+	let cartProducts = [];
+	
 	const cartContainer = document.querySelector('.cart-box')
 	const emptyCartMessage = document.querySelector('.cart-box__empty-message--visible')
 	const cartBoxContent = document.querySelector('.cart-box__content');
@@ -11,6 +13,19 @@ export default function CartItems() {
 	});
 	
 	cartEmptyButton.addEventListener('click', handleCartEmptyButtonClick);
+	// cartCheckoutButton.addEventListener('click', handleCartCheckoutButtonClick);
+	
+	function handleAddToCartButtonClick(event) {
+		const button = event.currentTarget;
+		
+		addToCart(button);
+		render();
+	}
+	
+	function handleCartEmptyButtonClick() {
+		emptyCart();
+		render();
+	}
 	function addToCart(button) {
 		const clickedButtonDataset = button.parentNode.dataset;
 		const product = {
