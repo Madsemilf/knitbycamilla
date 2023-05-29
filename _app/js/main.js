@@ -7,9 +7,10 @@ import CartItems from './modules/cart-items.js'
 
 
 
-// emptyCart();
-CartItems ();
+
+ShowCart ();
 FrontpageCategories ();
 FrontpageHeroImages ();
 FrontpageInformationImage ();
 await PatternProducts ();
+CartItems();
