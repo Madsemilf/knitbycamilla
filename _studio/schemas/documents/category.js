@@ -16,6 +16,14 @@ export default {
 				source: 'name',
 				slugify: input => input.toLowerCase().replace(/\s+/g, '-'),
 			} 
-		}
+		},
+		{
+			title: 'Preview',
+			name: 'preview',
+			type: 'image',
+			options: {
+			  hotspot: true,
+			}
+		},	
 	]
 }
