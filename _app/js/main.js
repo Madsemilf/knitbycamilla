@@ -1,6 +1,12 @@
-import emptyCart from './modules/cart.js'
-import cartItems from './modules/cartItems.js'
+import emptyCart from './modules/Cart.js'
+import CartItems from './modules/CartItems.js'
+import FrontpageCategories from './modules/frontpage-categories.js'
+import FrontpageHeroImages from './modules/frontpage-hero-images.js'
+import FrontpageInformationImage from './modules/frontpage-information.js'
+
 
 // emptyCart();
-
-cartItems ();
+CartItems ();
+FrontpageCategories ();
+FrontpageHeroImages ();
+FrontpageInformationImage ();
