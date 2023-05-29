@@ -10,3 +10,11 @@ export default async function FrontpageInformationImage () {
   	}`;
  
 	const patterns = await sanity.fetch(query);
+
+	// Randomly select one pattern
+	const selectedPattern = getRandomElement(patterns, 1);
+
+	function getRandomElement(array, count) {
+		const shuffledPatterns = array.sort(() => 0.5 - Math.random());
+		return shuffledPatterns.slice(0, count);
+	}
