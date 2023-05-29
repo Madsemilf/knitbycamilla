@@ -186,10 +186,6 @@
 	.header__navigation button span:not(.navigation__cart-count) {
 		display: none;
 	}
-	
-	.header div:first-child {
-		
-	}
 
 	.navigation__dropdown {
 		top: 1.2rem;
@@ -222,13 +218,8 @@
 		font-size: 1.5rem;
 	 }
   
-	 .navigation__dropdown-pattern a:hover {
-		transform: scale(1.2);
-		font-weight: bold;
-	 }
-  
-	 .navigation__dropdown:focus-within .navigation__dropdown-pattern {
-		display: block;
+	 .navigation__dropdown:hover .navigation__dropdown-pattern {
+		display: none;
 	 }
 }
 
