@@ -53,3 +53,23 @@ export default function CartItems() {
 	function emptyCart() {
 		cartProducts = [];
 	}
+
+	function createCartItemDOM(product) {
+		const cartItem = document.createElement('div');
+		cartItem.classList.add('cart-box__item');
+		
+		const quantity = document.createElement('div');
+		quantity.textContent = product.quantity;
+		cartItem.appendChild(quantity);
+		
+		const name = document.createElement('div');
+		name.textContent = product.name;
+		cartItem.appendChild(name);
+		
+		const price = document.createElement('div');
+		price.classList.add('cart-box__item-price');
+		price.textContent = product.price;
+		cartItem.appendChild(price);
+		
+		return cartItem;
+	}
