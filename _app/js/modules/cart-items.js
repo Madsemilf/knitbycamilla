@@ -7,7 +7,8 @@ export default function CartItems() {
 	const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart')
 	const cartEmptyButton = document.querySelector('.cart-box__button--empty');
 	const cartCheckoutButton = document.querySelector('.cart-box__checkout-button');
-
+	const cartTotalContainer = document.createElement('div');
+	
 	addToCartButtons.forEach(button => {
 		button.addEventListener('click', handleAddToCartButtonClick);
 	});
@@ -42,18 +43,18 @@ export default function CartItems() {
 		}
 		
 		const matchInCart = cartProducts.find(product => product.id === clickedButtonDataset.id)
-
+		
 		if(matchInCart) {
 			matchInCart.quantity += 1;
 		} else {
 			cartProducts.push(product);
 		}
 	}
-
+	
 	function emptyCart() {
 		cartProducts = [];
 	}
-
+	
 	function createCartItemDOM(product) {
 		const cartItem = document.createElement('div');
 		cartItem.classList.add('cart-box__item');
@@ -73,7 +74,7 @@ export default function CartItems() {
 		
 		return cartItem;
 	}
-
+	
 	function render() {
 		cartBoxContent.innerHTML = ''; // Clear the cart items before rendering
 		let totalQuantity = 0;
@@ -90,3 +91,10 @@ export default function CartItems() {
 		} else {
 		  emptyCartMessage.classList.add('cart-box__empty-message--visible');
 		}
+	 
+		// Adds a total quantity and totale price in NOK at bottom of box content
+		cartTotalContainer.classList.add('cart-box__total');
+		cartTotalContainer.textContent = `Total Quantity: ${totalQuantity}, Total Price: ${totalPrice} NOK`;
+		cartBoxContent.appendChild(cartTotalContainer);
+	 }
+}
