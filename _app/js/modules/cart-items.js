@@ -73,3 +73,20 @@ export default function CartItems() {
 		
 		return cartItem;
 	}
+
+	function render() {
+		cartBoxContent.innerHTML = ''; // Clear the cart items before rendering
+		let totalQuantity = 0;
+		let totalPrice = 0;
+	 
+		if (cartProducts.length > 0) {
+		  emptyCartMessage.classList.remove('cart-box__empty-message--visible');
+		  cartProducts.forEach(product => {
+			 const cartItem = createCartItemDOM(product);
+			 cartBoxContent.appendChild(cartItem);
+			 totalQuantity += product.quantity;
+			 totalPrice += product.quantity * product.price;
+		  });
+		} else {
+		  emptyCartMessage.classList.add('cart-box__empty-message--visible');
+		}
