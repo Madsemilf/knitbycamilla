@@ -5,9 +5,6 @@ import FrontpageInformationImage from './modules/frontpage-information.js'
 import PatternProducts from './modules/patternProducts.js'
 import CartItems from './modules/cart-items.js'
 
-
-
-
 ShowCart ();
 FrontpageCategories ();
 FrontpageHeroImages ();
