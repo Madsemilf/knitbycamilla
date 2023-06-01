@@ -34,7 +34,7 @@ export default async function PatternProducts() {
 			product.setAttribute('data-price', pattern_document.price);
 
 			productImg.src = `${pattern_document.Image.asset.url}`;
-			productImg.alt = `${product.name};`
+			productImg.alt = `${pattern_document.name};`
 			
 			productName.textContent = pattern_document.name;
 			productPrice.textContent = pattern_document.price + ' NOK';
@@ -47,6 +47,12 @@ export default async function PatternProducts() {
 			productInformation.appendChild(productPrice);
 			product.appendChild(productAddToCartButton);
 		
+			// Add event listener to the image
+			productImg.addEventListener('click', () => {
+			const slug = pattern_document.slug.current;
+			// Redirect to the specific product page using the slug
+			window.location.href = `${slug}`;
+		});
 			return product;
 		}		
 		
