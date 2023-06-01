@@ -24,7 +24,7 @@ export default async function PatternProducts() {
 		const productImg = document.createElement('img');
 		productImg.classList.add('products__product-img');
 		productImg.src = `${pattern_document.Image.asset.url}`;
-		productImg.alt = '';
+		productImg.alt = `${product.name};`
 		productImage.appendChild(productImg);
 
 		const productInformation = document.createElement('div');
