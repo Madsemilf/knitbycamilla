@@ -1,22 +1,22 @@
-## **Knit By Camilla Webshop**
+# **Knit By Camilla Webshop**
 Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting projects and provide information about her work.
 
-# Website URL
+## Website URL
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
 
-# Features
+## Features
 Browse a collection of hand-knit creations, including scarves, hats, and sweaters.
 View high-quality images of each knitting project.
 Learn more about Camilla and her knitting journey.
 Contact Camilla for inquiries or custom orders.
 
-# Technologies Used
+## Technologies Used
 HTML5 and CSS3 for the website structure and styling.
 JavaScript for interactivity and dynamic functionality.
 Sanity as a headless CMS for managing the content of the website.
 Netlify for hosting the website.
 
-# Getting Started
+## Getting Started
 
 To run the website locally or make modifications, follow these steps:
 
@@ -36,13 +36,13 @@ npm install
 Open the index.html (root) in a web browser to view the website.
 
 
-# Contributing
+## Contributing
 Contributions to Knit By Camilla are currently not open. However, if you have suggestions or find any issues, please feel free to reach out to Camilla using the contact information provided on the website.
 
-# License
+## License
 This project is licensed under the MIT License.
 
-# Contact
+## Contact
 For any inquiries or further information, please contact Camilla via email at camilla@example.com.
 
 Thank you for visiting Knit By Camilla! Enjoy exploring the beautiful hand-knit creations.
