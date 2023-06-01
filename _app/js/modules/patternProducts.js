@@ -3,120 +3,120 @@ import { filterPatterns } from './filterData.js';
 
 
 export default async function PatternProducts() {
-
+	
 	const patternsContainer = document.querySelector('.products');
-
+	
 	if (document.body.classList.contains('product-page')) {
-
+		
 		const patterns = await fetchPatterns();
 		renderAllPatterns();
-    	attachAddToCartListeners();
-
+		attachAddToCartListeners();
+		
 		function createPatternItemDOM(pattern_document) {
-		const product = document.createElement('div');
-		product.classList.add('products__product', 'box', 'grid__column--3');
-		product.setAttribute('data-id', pattern_document._id);
-		product.setAttribute('data-name', pattern_document.name);
-		product.setAttribute('data-price', pattern_document.price);
-
-		const productImage = document.createElement('div');
-		productImage.classList.add('products__product-image');
-		product.appendChild(productImage);
-
-		const productImg = document.createElement('img');
-		productImg.classList.add('products__product-img');
-		productImg.src = `${pattern_document.Image.asset.url}`;
-		productImg.alt = `${product.name};`
-		productImage.appendChild(productImg);
-
-		const productInformation = document.createElement('div');
-		productInformation.classList.add('products__product-information');
-		product.appendChild(productInformation);
-
-		const productName = document.createElement('div');
-		productName.classList.add('frontpage-products__product-name');
-		productName.textContent = pattern_document.name;
-		productInformation.appendChild(productName);
-
-		const productPrice = document.createElement('div');
-		productPrice.classList.add('products__product-price');
-		productPrice.textContent = pattern_document.price + ' NOK';
-		productInformation.appendChild(productPrice);
-
-		const productAddToCartButton = document.createElement('button');
-		productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
-		productAddToCartButton.textContent = 'Add to Cart';
-		product.appendChild(productAddToCartButton);
-
-		return product;
+			const product = document.createElement('div');
+			product.classList.add('products__product', 'box', 'grid__column--3');
+			product.setAttribute('data-id', pattern_document._id);
+			product.setAttribute('data-name', pattern_document.name);
+			product.setAttribute('data-price', pattern_document.price);
+			
+			const productImage = document.createElement('div');
+			productImage.classList.add('products__product-image');
+			product.appendChild(productImage);
+			
+			const productImg = document.createElement('img');
+			productImg.classList.add('products__product-img');
+			productImg.src = `${pattern_document.Image.asset.url}`;
+			productImg.alt = `${product.name};`
+			productImage.appendChild(productImg);
+			
+			const productInformation = document.createElement('div');
+			productInformation.classList.add('products__product-information');
+			product.appendChild(productInformation);
+			
+			const productName = document.createElement('div');
+			productName.classList.add('frontpage-products__product-name');
+			productName.textContent = pattern_document.name;
+			productInformation.appendChild(productName);
+			
+			const productPrice = document.createElement('div');
+			productPrice.classList.add('products__product-price');
+			productPrice.textContent = pattern_document.price + ' NOK';
+			productInformation.appendChild(productPrice);
+			
+			const productAddToCartButton = document.createElement('button');
+			productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
+			productAddToCartButton.textContent = 'Add to Cart';
+			product.appendChild(productAddToCartButton);
+			
+			return product;
 		}		
-	
+		
 		function insertPatternItems(patterns) {
 			patternsContainer.innerHTML = ''; // Clear the container
-	  
+			
 			for (const pattern of patterns) {
-			  const patternItem = createPatternItemDOM(pattern);
-			  patternsContainer.appendChild(patternItem);
+				const patternItem = createPatternItemDOM(pattern);
+				patternsContainer.appendChild(patternItem);
 			}
-		 }
-
-		 
-
-
-		 
-		 function insertFilteredPatternItems(ageGroup, difficulty, category) {
+		}
+		
+		
+		
+		
+		
+		function insertFilteredPatternItems(ageGroup, difficulty, category) {
 			let filteredPatterns = filterPatterns(patterns, ageGroup, difficulty, category);
 			insertPatternItems(filteredPatterns);
 			attachAddToCartListeners(); 
-		 }
-
-		 function attachAddToCartListeners() {
-			const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart');
-		addToCartButtons.forEach(button => {
-			button.removeEventListener('click', handleAddToCartButtonClick);
-			button.addEventListener('click', handleAddToCartButtonClick);
-		});
 		}
-	  
-		 function renderAllPatterns() {
+		
+		function attachAddToCartListeners() {
+			const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart');
+			addToCartButtons.forEach(button => {
+				button.removeEventListener('click', handleAddToCartButtonClick);
+				button.addEventListener('click', handleAddToCartButtonClick);
+			});
+		}
+		
+		function renderAllPatterns() {
 			insertPatternItems(patterns);
 			attachAddToCartListeners();
-		 }
-	  
-		 function renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory) {
+		}
+		
+		function renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory) {
 			let filteredPatterns = patterns;
-		  
+			
 			if (selectedAgeGroup === 'select__age-child') {
-			  filteredPatterns = filterPatterns(filteredPatterns, 'Child');
+				filteredPatterns = filterPatterns(filteredPatterns, 'Child');
 			} else if (selectedAgeGroup === 'select__age-adult') {
-			  filteredPatterns = filterPatterns(filteredPatterns, 'Adult');
+				filteredPatterns = filterPatterns(filteredPatterns, 'Adult');
 			}
-		  
+			
 			if (selectedDifficulty === 'select__difficulty-beginner') {
-			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Beginner');
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Beginner');
 			} else if (selectedDifficulty === 'select__difficulty-intermediate') {
-			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Intermediate');
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Intermediate');
 			} else if (selectedDifficulty === 'select__difficulty-advanced') {
-			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Advanced');
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Advanced');
 			}
-
-
+			
+			
 			if (selectedCategory === 'select__category-sweaters') {
 				filteredPatterns = filterPatterns(filteredPatterns, '', 'Sweaters');
-			 } else if (selectedCategory === 'select__category-jackets') {
+			} else if (selectedCategory === 'select__category-jackets') {
 				filteredPatterns = filterPatterns(filteredPatterns, '', 'Jackets');
-			 } else if (selectedCategory === 'select__category-vests') {
+			} else if (selectedCategory === 'select__category-vests') {
 				filteredPatterns = filterPatterns(filteredPatterns, '', 'Vests');
-			 } else if (selectedCategory === 'select__category-accessories') {
+			} else if (selectedCategory === 'select__category-accessories') {
 				filteredPatterns = filterPatterns(filteredPatterns, '', 'Accessories');
-			 }
-
-		  
+			}
+			
+			
 			insertPatternItems(filteredPatterns);
 			attachAddToCartListeners(); 
-		 }
-		 
-		 function handleFiltersChange() {
+		}
+		
+		function handleFiltersChange() {
 			const selectAge = document.getElementById('select__age');
 			const selectDifficulty = document.getElementById('select__difficulty');
 			const selectCategory = document.getElementById('select__category');
@@ -125,25 +125,33 @@ export default async function PatternProducts() {
 			const selectedCategory = selectCategory.value;
 			
 			renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory);
-		 }
-		 
-		 // Attach the event listeners to the select elements
-		 const selectAge = document.getElementById('select__age');
-		 const selectDifficulty = document.getElementById('select__difficulty');
-		 const selectCategory = document.getElementById('select__category');
-		 selectAge.addEventListener('change', handleFiltersChange);
-		 selectDifficulty.addEventListener('change', handleFiltersChange);
-		 selectCategory.addEventListener('change', handleFiltersChange);
-		
-		 
-		 // Initial rendering of all patterns
-		 renderAllPatterns();
-		 attachAddToCartListeners();
 		}
+		
+		// Attach the event listeners to the select elements
+		const selectAge = document.getElementById('select__age');
+		const selectDifficulty = document.getElementById('select__difficulty');
+		const selectCategory = document.getElementById('select__category');
+		selectAge.addEventListener('change', handleFiltersChange);
+		selectDifficulty.addEventListener('change', handleFiltersChange);
+		selectCategory.addEventListener('change', handleFiltersChange);
+		
+		
+		// Initial rendering of all patterns
+		renderAllPatterns();
+		attachAddToCartListeners();
+	}
+	
+	/**
+	 * HAD TO MOVE ALL THE CODE FROM cart-items.js TO ACTUALLY HANDLE ADD TO CART BUTTON CLICK ON RE-RENDERED ITEMS. 
+	 * If code was not moved here, the "Add to cart" buttons would not work.
+	 * 
+	 * The cart is rendering after PatternProducts because it is an asynchronous function.
+	 * The rendering of the cart happens befor the cart items are retrieved from local storage.
+	 * @TODO Move render logic for cart items into a separate file  .
+	 * 
+	 */
 
-
-// NEED TO ADD ALL THE CODE FROM CART ITEMS TO ACTUALLY HANDLE ADD TO CART BUTTON CLICK ON RE-RENDERED ITEMS (filtered items)
-		let cartProducts = getCartItemsLocally();
+	let cartProducts = getCartItemsLocally();
 	
 	const cartContainer = document.querySelector('.cart-box')
 	const emptyCartMessage = document.querySelector('.cart-box__empty-message--visible')
@@ -205,7 +213,7 @@ export default async function PatternProducts() {
 	
 	function emptyCart() {
 		cartProducts = [];
-
+		
 		storeCartItemsLocally();
 	}
 	
@@ -232,58 +240,59 @@ export default async function PatternProducts() {
 	// Clear the cart items before rendering. 
 	// Checks how many items are in the cart. Runs message if empty.
 	// Iterate over products in the cart, and calculates total price.
-
+	
 	function render() {
 		cartBoxContent.innerHTML = ''; 
 		let totalQuantity = 0;
 		let totalPrice = 0;
-	 
+		
 		if (cartProducts.length > 0) {
-		  emptyCartMessage.classList.remove('cart-box__empty-message--visible');
-		  cartProducts.forEach(product => {
-			 const cartItem = createCartItemDOM(product);
-			 cartBoxContent.appendChild(cartItem);
-			 totalQuantity += product.quantity;
-			 totalPrice += product.quantity * product.price;
-		  });
+			emptyCartMessage.classList.remove('cart-box__empty-message--visible');
+			cartProducts.forEach(product => {
+				const cartItem = createCartItemDOM(product);
+				cartBoxContent.appendChild(cartItem);
+				totalQuantity += product.quantity;
+				totalPrice += product.quantity * product.price;
+			});
 		} else {
-		  emptyCartMessage.classList.add('cart-box__empty-message--visible');
+			emptyCartMessage.classList.add('cart-box__empty-message--visible');
 		}
-	 
+		
 		// Adds a total quantity and total price in NOK at bottom of box content
 		cartTotalContainer.classList.add('cart-box__total');
 		cartTotalContainer.textContent = `Total Quantity: ${totalQuantity}, Total Price: ${totalPrice} NOK`;
 		cartBoxContent.appendChild(cartTotalContainer);
-
-
+		
+		
 		// Updates the cart counter = total quantity.
 		cartCountElement.textContent = totalQuantity;
-	 }
-
-	 function storeCartItemsLocally() {
+	}
+	
+	function storeCartItemsLocally() {
 		const key = 'cart-items';
 		const value = JSON.stringify(cartProducts);
 		window.localStorage.setItem(key, value);
-	 }
-  
-	 function getCartItemsLocally() {
+	}
+	
+	function getCartItemsLocally() {
 		const key = 'cart-items';
 		const cartItemsAsString = window.localStorage.getItem(key);
-  
+		
 		if (cartItemsAsString) {
-		  return JSON.parse(cartItemsAsString);
+			return JSON.parse(cartItemsAsString);
 		} else {
-		  return [];
+			return [];
 		}
-	 }
-	 if (cartContainer !== null) {
+	}
+	if (cartContainer !== null) {
 		cartContainer.addEventListener('click', (event) => {
-		  if (event.target.classList.contains('products__product-add-to-cart')) {
-			 handleAddToCartButtonClick(event);
-		  } else if (event.target.classList.contains('cart-box__button--empty')) {
-			 handleCartEmptyButtonClick();
-		  }
+			if (event.target.classList.contains('products__product-add-to-cart')) {
+				handleAddToCartButtonClick(event);
+			} else if (event.target.classList.contains('cart-box__button--empty')) {
+				handleCartEmptyButtonClick();
+			}
 		});
-	 }
+	}
+	render();
 }
 
