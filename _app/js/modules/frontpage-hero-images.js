@@ -6,33 +6,53 @@ export default async function FrontpageHeroImages() {
 		Image {
 			..., asset ->
 			
-    	}
-  	}`;
- 
-	const patterns = await sanity.fetch(query);
-
-	if (document.body.classList.contains('home-page')) {
+		}
+	}`;
 	
-		// Randomly select two patterns
-		const selectedPatterns = getRandomElements(patterns, 2);
+	const patterns = await sanity.fetch(query);
+	
+	// Randomly select two patterns
+	const selectedPatterns = getRandomElements(patterns, 2);
+	
+	// Create DOM elements for hero images
+	function createHeroImagesDOM(pattern) {
+		const heroImageItem = document.createElement('div');
+		const heroImage = document.createElement('img');
 
-		function getRandomElements(array, count) {
-			const shuffledPatterns = array.sort(() => 0.5 - Math.random());
-			return shuffledPatterns.slice(0, count);
+		heroImageItem.classList.add('grid__column--6', 'frontpage-hero-image');
+  
+		heroImage.src = pattern.Image.asset.url;
+		heroImage.alt = '';
+		
+		// // Add hover effect on mouseenter
+		heroImage.addEventListener('mouseenter', () => {
+		  const randomPattern = getRandomElements(patterns, 1)[0];
+		  heroImage.src = randomPattern.Image.asset.url;
+		});
+  
+		heroImage.addEventListener('mouseleave', () => {
+		  heroImage.src = pattern.Image.asset.url;
+		});
+  
+		heroImageItem.appendChild(heroImage);
+		return heroImageItem;
+	 }
+  
+	 function getRandomElements(array, count) {
+		const shuffledPatterns = array.sort(() => 0.5 - Math.random());
+		return shuffledPatterns.slice(0, count);
+	 }
+  
+	 function renderHeroImages() {
+		for (const pattern of selectedPatterns) {
+		  const patternItem = createHeroImagesDOM(pattern);
+		  heroImagesContainer.appendChild(patternItem);
 		}
-
-		function createHeroImagesDOM(pattern) {
-		return `<div class="grid__column--6 frontpage-hero-image">
-			<img src="${pattern.Image.asset.url}" alt="Picture of knitted handbag">
-		</div>`;
-		}
-
-		function renderHeroImages () {
-			for (const pattern of selectedPatterns) {
-				const patternItem = createHeroImagesDOM(pattern);
-				heroImagesContainer.innerHTML += patternItem;
-			}
-		}
+	 }
+	
+	if (document.body.classList.contains('home-page')) {
 		renderHeroImages();
 	}
+	
+	
 }
