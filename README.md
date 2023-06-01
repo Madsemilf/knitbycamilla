@@ -1,5 +1,5 @@
 <h1 align="center">
- knitByCamilla Pattern shop
+ knitByCamilla's Pattern shop
 </h1>
 
 Welcome to knitByCamilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting and to get inspired! You can also buy pattern to knit your own amazing clothes!
