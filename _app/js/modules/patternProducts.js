@@ -1,5 +1,5 @@
-import {sanity} from '../sanity.js';
-// import formatPrice from '../util/format-price.js';
+import fetchPatterns from './fetchData.js';
+import { filterPatterns } from './filterData.js';
 
 export default async function PatternProducts() {
 	const patternsContainer = document.querySelector('.products');
