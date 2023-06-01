@@ -1,5 +1,6 @@
 export default function CartItems() {
-	let cartProducts = [];
+	
+	let cartProducts = getCartItemsLocally();
 	
 	const cartContainer = document.querySelector('.cart-box')
 	const emptyCartMessage = document.querySelector('.cart-box__empty-message--visible')
@@ -7,11 +8,15 @@ export default function CartItems() {
 	const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart')
 	const cartEmptyButton = document.querySelector('.cart-box__button--empty');
 	const cartCheckoutButton = document.querySelector('.cart-box__checkout-button');
+	const cartCountElement = document.querySelector('.navigation__cart-count');
 	const cartTotalContainer = document.createElement('div');
 	
-	addToCartButtons.forEach(button => {
-		button.addEventListener('click', handleAddToCartButtonClick);
-	});
+	if (cartContainer !== null) {
+		addToCartButtons.forEach(button => {
+			button.addEventListener('click', handleAddToCartButtonClick);
+		});
+	}
+	
 	
 	cartEmptyButton.addEventListener('click', handleCartEmptyButtonClick);
 	// cartCheckoutButton.addEventListener('click', handleCartCheckoutButtonClick);
@@ -21,17 +26,20 @@ export default function CartItems() {
 		
 		addToCart(button);
 		render();
+		
 	}
 	
 	function handleCartEmptyButtonClick() {
 		emptyCart();
 		render();
+		
 	}
 	
 	// function handleCartCheckoutButtonClick() {
 	// 	checkout();
 	// 	render();
 	// }
+	
 	
 	function addToCart(button) {
 		const clickedButtonDataset = button.parentNode.dataset;
@@ -49,10 +57,14 @@ export default function CartItems() {
 		} else {
 			cartProducts.push(product);
 		}
+		storeCartItemsLocally();
 	}
+	
 	
 	function emptyCart() {
 		cartProducts = [];
+
+		storeCartItemsLocally();
 	}
 	
 	function createCartItemDOM(product) {
@@ -75,8 +87,12 @@ export default function CartItems() {
 		return cartItem;
 	}
 	
+	// Clear the cart items before rendering. 
+	// Checks how many items are in the cart. Runs message if empty.
+	// Iterate over products in the cart, and calculates total price.
+
 	function render() {
-		cartBoxContent.innerHTML = ''; // Clear the cart items before rendering
+		cartBoxContent.innerHTML = ''; 
 		let totalQuantity = 0;
 		let totalPrice = 0;
 	 
@@ -92,9 +108,31 @@ export default function CartItems() {
 		  emptyCartMessage.classList.add('cart-box__empty-message--visible');
 		}
 	 
-		// Adds a total quantity and totale price in NOK at bottom of box content
+		// Adds a total quantity and total price in NOK at bottom of box content
 		cartTotalContainer.classList.add('cart-box__total');
 		cartTotalContainer.textContent = `Total Quantity: ${totalQuantity}, Total Price: ${totalPrice} NOK`;
 		cartBoxContent.appendChild(cartTotalContainer);
+
+
+		// Updates the cart counter = total quantity.
+		cartCountElement.textContent = totalQuantity;
 	 }
+
+	 function storeCartItemsLocally() {
+		const key = 'cart-items';
+		const value = JSON.stringify(cartProducts);
+		window.localStorage.setItem(key, value);
+	 }
+  
+	 function getCartItemsLocally() {
+		const key = 'cart-items';
+		const cartItemsAsString = window.localStorage.getItem(key);
+  
+		if (cartItemsAsString) {
+		  return JSON.parse(cartItemsAsString);
+		} else {
+		  return [];
+		}
+	 }
+	 render() 
 }
