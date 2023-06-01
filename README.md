@@ -16,7 +16,7 @@ Learn more about Camilla and her knitting journey.
 Contact Camilla for inquiries or custom orders.
 
 ## Technologies Used
-HTML5 and CSS3 for the website structure and styling.
+HTML and CSS for the website structure and styling.
 JavaScript for interactivity and dynamic functionality.
 Sanity as a headless CMS for managing the content of the website.
 Netlify for hosting the website.
@@ -48,7 +48,10 @@ To run the website locally or make modifications, follow these steps:
 
 ## Contributing
 Contributions to Knit By Camilla are currently not open. However, if you have suggestions or find any issues, please feel free to reach out to Camilla using the contact information provided on the website.
-
+	
+## Author
+- Mads-Emil Fellkjær
+	
 ## License
 This project is licensed under the MIT License.
 
