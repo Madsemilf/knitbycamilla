@@ -7,68 +7,61 @@ export default async function FrontpageCategories () {
 		preview {
 			..., asset ->
 			
-    	}
-  	}`;
-
+		}
+	}`;
+	
 	const categories = await sanity.fetch(query);
-
-	if (document.body.classList.contains('home-page')) {
-
-		function createCategoryImageDOM(category) {
-			
-			const frontpageCategoryItem = document.createElement('div');
-			const frontpageCategoryLink = document.createElement('a');
-			const frontpageCategoryImageButton = document.createElement('button');
-			const frontpageCategoryImage = document.createElement('img');
-			const frontpageCategoryName = document.createElement('div');
-			const frontpageCategoryButton = document.createElement('button');
-
-			frontpageCategoryItem.setAttribute('data-name', category.name);
-
-			frontpageCategoryItem.classList.add('frontpage-catgories__category', 'grid__column--3');
-			frontpageCategoryImageButton.classList.add('frontpage-categories-image');
-			frontpageCategoryLink.classList.add('frontpage-categories-link');
-			frontpageCategoryButton.classList.add('frontpage-catgories__category--button');
-
-			frontpageCategoryLink.href = '/pattern/index.html';
-			frontpageCategoryImage.src = category.preview.asset.url;
-			frontpageCategoryImage.alt = '';
-			frontpageCategoryButton.textContent = category.name;
-			
-			frontpageCategoryContainer.appendChild(frontpageCategoryItem);
-			frontpageCategoryItem.appendChild(frontpageCategoryLink);
-			frontpageCategoryLink.appendChild(frontpageCategoryImageButton);
-			frontpageCategoryImageButton.appendChild(frontpageCategoryImage);
-			frontpageCategoryLink.appendChild(frontpageCategoryName);
-			frontpageCategoryName.appendChild(frontpageCategoryButton);
-		}
-
-		function renderCategoryImages() {
-			for (const category of categories) {
+	
+	/**
+	* Create category image DOM elements and append them to the category container.
+	* @param {Object} category - The category object.
+	*/
+	function createCategoryImageDOM(category) {
+		// Create DOM elements
+		const frontpageCategoryItem = document.createElement('div');
+		const frontpageCategoryLink = document.createElement('a');
+		const frontpageCategoryImageButton = document.createElement('button');
+		const frontpageCategoryImage = document.createElement('img');
+		const frontpageCategoryName = document.createElement('div');
+		const frontpageCategoryButton = document.createElement('button');
+		
+		// Set data-name attribute
+		frontpageCategoryItem.setAttribute('data-name', category.name);
+		
+		// Add CSS classes to elements
+		frontpageCategoryItem.classList.add('frontpage-catgories__category', 'grid__column--3');
+		frontpageCategoryImageButton.classList.add('frontpage-categories-image');
+		frontpageCategoryLink.classList.add('frontpage-categories-link');
+		frontpageCategoryButton.classList.add('frontpage-catgories__category--button');
+		
+		// Set href, image source, and button text content
+		frontpageCategoryLink.href = '/pattern/index.html';
+		frontpageCategoryImage.src = category.preview.asset.url;
+		frontpageCategoryImage.alt = '';
+		frontpageCategoryButton.textContent = category.name;
+		
+		// Append elements to their parent elements
+		frontpageCategoryContainer.appendChild(frontpageCategoryItem);
+		frontpageCategoryItem.appendChild(frontpageCategoryLink);
+		frontpageCategoryLink.appendChild(frontpageCategoryImageButton);
+		frontpageCategoryImageButton.appendChild(frontpageCategoryImage);
+		frontpageCategoryLink.appendChild(frontpageCategoryName);
+		frontpageCategoryName.appendChild(frontpageCategoryButton);
+	}
+	
+	/**
+	* Render category images by creating DOM elements for each category.
+	*/
+	function renderCategoryImages() {
+		// Iterate over categories and create category image DOM elements
+		for (const category of categories) {
 			createCategoryImageDOM(category);
-			}
 		}
+	}
+	
+	// Check if the page is the home page
+	if (document.body.classList.contains('home-page')) {
+		// Render category images
 		renderCategoryImages();
 	}
 }
-
-// 	return `<div class="frontpage-catgories__category grid__column--3" data-name:"${category.name}">
-		// 	<a href="/pattern/index.html" class="frontpage-categories-link">
-		// 	<button class="frontpage-categories-image">
-		// 		<img src="${category.preview.asset.url}" alt="">
-		// 	</button>
-		// 	<div>
-		// 		<button class="frontpage-catgories__category--button">${category.name}</button>
-		// 	</div>
-		// 	</a>
-		// </div>`
-		// }
-	
-	
-		// function renderCategoryImages () {
-		// 	for (const category of categories) {
-		// 		const categoryItem = createCategoryImageDOM(category);
-		// 		// categoryContainer.appendChild(categoryItem)
-	
-		// 		categoryContainer.innerHTML += categoryItem;
-		// 	}
