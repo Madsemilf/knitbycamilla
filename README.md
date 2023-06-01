@@ -27,13 +27,15 @@ To run the website locally or make modifications, follow these steps:
 
 2. Navigate to the project directory:
 
-cd knit-by-camilla
+	```bash
+	cd knit-by-camilla
 
 3. Install the necessary dependencies by running the following command in the _studio directory:
 
-cd _studio
-npm install
-Open the index.html (root) in a web browser to view the website.
+	```bash
+	cd _studio npm install
+	
+4. Open the index.html (root) in a web browser to view the website.
 
 
 ## Contributing
