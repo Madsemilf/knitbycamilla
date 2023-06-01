@@ -126,6 +126,7 @@ export default async function PatternProducts() {
 		 selectDifficulty.addEventListener('change', handleFiltersChange);
 		 selectCategory.addEventListener('change', handleFiltersChange);
 		 renderAllPatterns();
+		}
 		function render() {
 			// insertPatternItemsTheWrongWay();
 			insertPatternItems();
