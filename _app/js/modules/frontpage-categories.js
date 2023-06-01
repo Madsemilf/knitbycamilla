@@ -16,7 +16,7 @@ export default async function FrontpageCategories () {
 		function createCategoryImageDOM(category) {
 
 			return `<div class="frontpage-catgories__category grid__column--3" data-name:"${category.name}">
-			<a href="index.html" class="frontpage-categories-link">
+			<a href="/pattern/index.html" class="frontpage-categories-link">
 			<button class="frontpage-categories-image">
 				<img src="${category.preview.asset.url}" alt="">
 			</button>
