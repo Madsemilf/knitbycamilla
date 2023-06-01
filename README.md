@@ -1,8 +1,8 @@
 <h1 align="center">
-  Knit By Camilla Webshop
+ knitByCamilla Webshop
 </h1>
 
-Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting and to get inspired! You can also buy pattern to knit your own amazing clothes!
+Welcome to knitByCamilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting and to get inspired! You can also buy pattern to knit your own amazing clothes!
 
 ## Deployment
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
@@ -51,7 +51,7 @@ To run the website locally or make modifications, follow these steps:
 
 
 ## Contributing
-Contributions to Knit By Camilla are currently not open. However, if you have suggestions or find any issues, please feel free to reach out to Camilla using the contact information provided on the website.
+Contributions to knitByCamilla are currently not open. However, if you have suggestions or find any issues, please feel free to reach out to Camilla using the contact information provided on the website.
 	
 ## Author
 - Mads-Emil Fellkjær
@@ -62,4 +62,4 @@ This project is licensed under the MIT License.
 ## Contact
 For any inquiries or further information, please contact Camilla via email at camilla@example.com.
 
-Thank you for visiting Knit By Camilla! Enjoy exploring the beautiful hand-knit creations.
+Thank you for visiting knitByCamilla! Enjoy exploring the beautiful hand-knit creations.
