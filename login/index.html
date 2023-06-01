@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		
 		<link rel="stylesheet" href="/_app/css/main.css">
-		<script type="module" src="/_app/js/main.js"></script>
+		<script type="module" src="/_app/js/login.js"></script>
 	</head>
 
 	
@@ -66,26 +66,46 @@
 			</nav>
 		</header>
 
-		<section class="login">
-			<h2 class="login-title">Sign in</h2>
-			<form class="login-form">
-				<div class="login-input">
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" placeholder="Enter your email" required>
-				</div>
-
-				<div class="login-input">
-					<label for="password">Password:</label>
-					<input type="password" id="password" name="password" placeholder="Enter your password" required>
-				</div>
-
-				<div class="login-input">
-					<button class="login-button" type="submit">Login</button>
+		<main>
+			<!-- Cart box -->
+			<section class="cart-box cart-box--hide cart-box--empty" id="cart-box">
+				<div class="cart-box__content">
+					<!-- cart items inserted from patternProduct.js -->
+					<!-- cart box inserted from showCart.js -->
+					
+					<div class="cart-box__empty-message--visible" id="cart-empty-message">
+						Your cart is empty
+					</div>
 				</div>
 				
-				<p class="login-not-a-user">Not a user? <a href="/singup/index.html">Click here to sign up</a></p>
-			</form>
-		</section>
+				<!-- cart total quantity and price inserted from patternProducts.js -->
+				<div class="cart-box__buttons">
+					<button class="cart-box__button--checkout">checkout</button>
+					<button class="cart-box__button--empty">empty cart</button> 
+				</div>
+			</section>
+
+			<section class="login">
+				<h2 class="login-title">Sign in</h2>
+				<form class="login-form">
+					<div class="login-input">
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" placeholder="Enter your email" required>
+					</div>
+	
+					<div class="login-input">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password" placeholder="Enter your password" required>
+					</div>
+	
+					<div class="login-input">
+						<button class="login-button" type="submit">Login</button>
+					</div>
+					
+					<p class="login-not-a-user">Not a user? <a href="/singup/index.html">Click here to sign up</a></p>
+				</form>
+			</section>
+		</main>
 
 		<!-- Footer section -->
 		<footer class="grid footer">

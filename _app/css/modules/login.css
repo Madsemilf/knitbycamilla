@@ -62,6 +62,7 @@ input[type="password"] {
 @media (max-width: 480px) {
 	.login-form {
 		padding: var(--gap-padding);
+		width: 100%;
 	}
 	
 	input[type="text"],
