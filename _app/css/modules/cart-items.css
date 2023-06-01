@@ -1,5 +1,6 @@
 .cart-box {
 	width: 40vw;
+	max-width: 400px;
 	display: flex;
 	flex-direction: column;
 	position: fixed;
@@ -8,7 +9,6 @@
 	top: 6rem;
 	z-index: 100;
 	overflow-y: auto;
-	right: 0;
 }
 
 .cart-box--hide {
