@@ -10,6 +10,8 @@ The live version of the website can be accessed at https://knitbycamilla.netlify
 The source code can be located at https://github.com/Madsemilf/knitbycamilla
 <p>
 Github project can be found at https://github.com/users/Madsemilf/projects/4
+<p>	
+Sanity studio and data documentation can be found at https://knitbycamilla.sanity.studio/
 
 ## Features
 Browse a collection of hand-knit creations, including scarves, hats, and sweaters.
