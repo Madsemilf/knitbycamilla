@@ -3,7 +3,8 @@
  * @param {Array} patterns - The array of patterns to filter.
  * @param {string} ageGroup - The age group to filter by.
  * @param {string} difficulty - The difficulty level to filter by.
- * @param {string} category - The category slug to filter by.
+ * @param {string} category - The category slug to filter by. This is not working properly.
+ * @todo Fix filter by category. Fetch correct "GROQ".
  * @returns {Array} - The filtered array of patterns.
  */
 
