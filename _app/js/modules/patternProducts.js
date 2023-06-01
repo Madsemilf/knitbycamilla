@@ -49,7 +49,9 @@ export default async function PatternProducts() {
 		return product;
 		}
 	
-		function insertPatternItems() {
+		function insertPatternItems(patterns) {
+			patternsContainer.innerHTML = ''; // Clear the container
+	  
 			for (const pattern of patterns) {
 			  const patternItem = createPatternItemDOM(pattern);
 			  patternsContainer.appendChild(patternItem);
