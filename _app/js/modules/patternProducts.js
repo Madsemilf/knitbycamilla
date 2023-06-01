@@ -1,14 +1,10 @@
 import fetchPatterns from './fetchData.js';
 import { filterPatterns } from './filterData.js';
 
+
 export default async function PatternProducts() {
+
 	const patternsContainer = document.querySelector('.products');
-	const query = `*[_type == 'pattern'] {
-		...,
-		Image {
-			..., asset->
-		}
-	}`;
 
 	const patterns = await sanity.fetch(query);
 
