@@ -96,7 +96,7 @@
 }
 
 /* .navigation__pattern-icon {
-	margin-right: 1.5rem;
+	padding: 1.5rem;
 } */
 
 .navigation__pattern-text {
@@ -204,8 +204,8 @@
 	}
 
 	.navigation__pattern-link {
-		top: 1px;
-		left: 20px;
+		top: 0px;
+		left: 0px;
 	}
 	
 	.navigation__pattern-text {
