@@ -1,6 +1,6 @@
-<p align="center">
-  <u><strong><span style="font-size: 32px;">Knit By Camilla Webshop</span></strong></u>
-</p>
+<h1 align="center">
+  Knit By Camilla Webshop
+</h1>
 
 Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting projects and provide information about her work.
 
@@ -25,8 +25,8 @@ To run the website locally or make modifications, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository_url>
+   	```bash
+   	git clone <repository_url>
 
 2. Navigate to the project directory:
 
