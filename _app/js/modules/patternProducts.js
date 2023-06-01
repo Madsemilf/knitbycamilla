@@ -57,6 +57,57 @@ export default async function PatternProducts() {
 			  patternsContainer.appendChild(patternItem);
 			}
 		 }
+		 function insertFilteredPatternItems(ageGroup, difficulty, category) {
+			let filteredPatterns = filterPatterns(patterns, ageGroup, difficulty, category);
+			insertPatternItems(filteredPatterns);
+			attachAddToCartListeners(); 
+		 }
+
+		 function attachAddToCartListeners() {
+			const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart');
+		addToCartButtons.forEach(button => {
+			button.removeEventListener('click', handleAddToCartButtonClick);
+			button.addEventListener('click', handleAddToCartButtonClick);
+		});
+		}
+	  
+		 function renderAllPatterns() {
+			insertPatternItems(patterns);
+			attachAddToCartListeners();
+		 }
+	  
+		 function renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory) {
+			let filteredPatterns = patterns;
+		  
+			if (selectedAgeGroup === 'select__age-child') {
+			  filteredPatterns = filterPatterns(filteredPatterns, 'Child');
+			} else if (selectedAgeGroup === 'select__age-adult') {
+			  filteredPatterns = filterPatterns(filteredPatterns, 'Adult');
+			}
+		  
+			if (selectedDifficulty === 'select__difficulty-beginner') {
+			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Beginner');
+			} else if (selectedDifficulty === 'select__difficulty-intermediate') {
+			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Intermediate');
+			} else if (selectedDifficulty === 'select__difficulty-advanced') {
+			  filteredPatterns = filterPatterns(filteredPatterns, '', 'Advanced');
+			}
+
+
+			if (selectedCategory === 'select__category-sweaters') {
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Sweaters');
+			 } else if (selectedCategory === 'select__category-jackets') {
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Jackets');
+			 } else if (selectedCategory === 'select__category-vests') {
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Vests');
+			 } else if (selectedCategory === 'select__category-accessories') {
+				filteredPatterns = filterPatterns(filteredPatterns, '', 'Accessories');
+			 }
+
+		  
+			insertPatternItems(filteredPatterns);
+			attachAddToCartListeners(); 
+		 }
 	
 		function render() {
 			// insertPatternItemsTheWrongWay();
