@@ -6,6 +6,7 @@ Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations b
 
 ## Website URL
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
+The source code can be located at https://github.com/Madsemilf/knitbycamilla
 
 ## Features
 Browse a collection of hand-knit creations, including scarves, hats, and sweaters.
@@ -18,6 +19,9 @@ HTML5 and CSS3 for the website structure and styling.
 JavaScript for interactivity and dynamic functionality.
 Sanity as a headless CMS for managing the content of the website.
 Netlify for hosting the website.
+
+Node.js
+Git
 
 ## Getting Started
 
