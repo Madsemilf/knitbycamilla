@@ -6,69 +6,70 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: -10rem;
- }
+}
 
- .signup-form {
+.signup-form {
 	width: 50%;
- }
- 
- .signup-input {
+}
+
+.signup-input {
 	color: var(--color-text);
 	padding: var(--gap-box-padding);
 	border-radius: 5px;
- }
- 
- .signup-input h2 {
+}
+
+.signup-input h2 {
 	margin-top: 0;
- }
- 
- .form-input {
+}
+
+.form-input {
 	margin-bottom: var(--gap-padding);
- }
- 
- .signup-input label {
+}
+
+.signup-input label {
 	display: block;
 	margin-bottom: 0.5rem;
- }
- 
- input[type="text"],
- input[type="email"],
- input[type="password"] {
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
 	width: 100%;
 	padding: var(--gap-padding);
 	font-size: var(--font-size-normal);
 	border-radius: 3px;
 	border: 1px solid var(--color-foreground);
- }
- 
- .signup-button {
+}
+
+.signup-button {
 	background-color: var(--color-highlight);
 	padding: var(--gap-button-padding);
 	font-size: var(--font-size-normal);
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
- }
- 
- .signup-button:hover {
+}
+
+.signup-button:hover {
 	background-color: var(--color-foreground);
- }
- 
- .signup-account {
+}
+
+.signup-account {
 	font-size: var(--font-size-small);
 	text-align: center;
- }
+}
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
 	.signup-form {
-	  padding: var(--gap-padding);
+		width: 100%;
+		padding: var(--gap-padding);
 	}
- 
+	
 	input[type="text"],
 	input[type="email"],
 	input[type="password"],
 	.signup-button {
-	  font-size: var(--font-size-small);
-	  padding: var(--gap-padding-small);
+		font-size: var(--font-size-small);
+		padding: var(--gap-padding-small);
 	}
- }
+}
