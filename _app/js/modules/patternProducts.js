@@ -20,7 +20,7 @@ export default async function PatternProducts() {
 			const productName = document.createElement('div');
 			const productPrice = document.createElement('div');
 			const productAddToCartButton = document.createElement('button');
-
+			
 			product.classList.add('products__product', 'box', 'grid__column--3');
 			productImage.classList.add('products__product-image');
 			productImg.classList.add('products__product-img');
@@ -28,11 +28,11 @@ export default async function PatternProducts() {
 			productName.classList.add('frontpage-products__product-name');
 			productPrice.classList.add('products__product-price');
 			productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
-
+			
 			product.setAttribute('data-id', pattern_document._id);
 			product.setAttribute('data-name', pattern_document.name);
 			product.setAttribute('data-price', pattern_document.price);
-
+			
 			productImg.src = `${pattern_document.Image.asset.url}`;
 			productImg.alt = `${pattern_document.name};`
 			
@@ -46,13 +46,14 @@ export default async function PatternProducts() {
 			productInformation.appendChild(productName);
 			productInformation.appendChild(productPrice);
 			product.appendChild(productAddToCartButton);
-		
+			
 			// Add event listener to the image
 			productImg.addEventListener('click', () => {
-			const slug = pattern_document.slug.current;
-			// Redirect to the specific product page using the slug
-			window.location.href = `${slug}`;
-		});
+				const slug = pattern_document.slug.current;
+				// Redirect to the specific product page using the slug
+				window.location.href = `${slug}`;
+			});
+			
 			return product;
 		}		
 		
@@ -64,7 +65,7 @@ export default async function PatternProducts() {
 				patternsContainer.appendChild(patternItem);
 			}
 		}
-	
+		
 		function insertFilteredPatternItems(ageGroup, difficulty, category) {
 			let filteredPatterns = filterPatterns(patterns, ageGroup, difficulty, category);
 			insertPatternItems(filteredPatterns);
@@ -143,15 +144,15 @@ export default async function PatternProducts() {
 	}
 	
 	/**
-	 * HAD TO MOVE ALL THE CODE FROM cart-items.js TO ACTUALLY HANDLE ADD TO CART BUTTON CLICK ON RE-RENDERED ITEMS. 
-	 * If code was not moved here, the "Add to cart" buttons would not work.
-	 * 
-	 * The cart is rendering after PatternProducts because it is an asynchronous function.
-	 * The rendering of the cart happens befor the cart items are retrieved from local storage.
-	 * @TODO Move render logic for cart items into a separate file  .
-	 * 
-	 */
-
+	* HAD TO MOVE ALL THE CODE FROM cart-items.js TO ACTUALLY HANDLE ADD TO CART BUTTON CLICK ON RE-RENDERED ITEMS. 
+	* If code was not moved here, the "Add to cart" buttons would not work.
+	* 
+	* The cart is rendering after PatternProducts because it is an asynchronous function.
+	* The rendering of the cart happens befor the cart items are retrieved from local storage.
+	* @TODO Move render logic for cart items into a separate file  .
+	* 
+	*/
+	
 	let cartProducts = getCartItemsLocally();
 	
 	const cartContainer = document.querySelector('.cart-box')
@@ -222,14 +223,14 @@ export default async function PatternProducts() {
 		const quantity = document.createElement('div');
 		const name = document.createElement('div');
 		const price = document.createElement('div');
-
+		
 		cartItem.classList.add('cart-box__item');
 		price.classList.add('cart-box__item-price');
 		
 		quantity.textContent = product.quantity;
 		name.textContent = product.name;
 		price.textContent = product.price;
-
+		
 		cartItem.appendChild(quantity);
 		cartItem.appendChild(name);
 		cartItem.appendChild(price);
