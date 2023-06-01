@@ -6,7 +6,7 @@ export default async function PatternProducts() {
 
 	const patternsContainer = document.querySelector('.products');
 
-	const patterns = await sanity.fetch(query);
+	if (document.body.classList.contains('product-page')) {
 
 	if (document.getElementById('pattern-products')) {
 	
