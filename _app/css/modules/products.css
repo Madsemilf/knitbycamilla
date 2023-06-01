@@ -18,7 +18,6 @@
 
 .products__product-price {
 	font-weight: bold;
-	text-align: end;
 }
 
 .products__product-image {
@@ -57,4 +56,13 @@
 	color: var(--color-text);
 	background-color: var(--color-highlight);
 	margin-top: var(--gap-row);
+}
+
+@media (max-width: 768px) {
+	.products__product-image:hover{
+		transform: scale(1.0);
+	}
+	.products__product-add-to-cart:hover {
+		background-color: transparent;
+	}
 }
