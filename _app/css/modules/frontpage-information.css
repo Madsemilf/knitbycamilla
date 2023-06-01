@@ -90,6 +90,8 @@
 		left: unset;
 		margin-top: 2rem;
 		font-size: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	.frontpage-information-image img {
 		height: 100%;
