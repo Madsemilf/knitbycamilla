@@ -12,7 +12,13 @@ export default async function PatternProducts() {
 		renderAllPatterns();
 		attachAddToCartListeners();
 		
+		/**
+		* Create the DOM elements for a pattern item
+		* @param {*} pattern_document - The pattern document
+		* @returns {HTMLElement} - The pattern item element
+		*/
 		function createPatternItemDOM(pattern_document) {
+			// Create the required elements
 			const product = document.createElement('div');
 			const productImage = document.createElement('div');
 			const productImg = document.createElement('img');
@@ -21,6 +27,7 @@ export default async function PatternProducts() {
 			const productPrice = document.createElement('div');
 			const productAddToCartButton = document.createElement('button');
 			
+			// Add classes to the elements
 			product.classList.add('products__product', 'box', 'grid__column--3');
 			productImage.classList.add('products__product-image');
 			productImg.classList.add('products__product-img');
@@ -29,17 +36,21 @@ export default async function PatternProducts() {
 			productPrice.classList.add('products__product-price');
 			productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
 			
+			// Set data attributes for the product
 			product.setAttribute('data-id', pattern_document._id);
 			product.setAttribute('data-name', pattern_document.name);
 			product.setAttribute('data-price', pattern_document.price);
 			
+			// Set image source and alt text
 			productImg.src = `${pattern_document.Image.asset.url}`;
 			productImg.alt = `${pattern_document.name};`
 			
+			// Set product name, price, and button text
 			productName.textContent = pattern_document.name;
 			productPrice.textContent = pattern_document.price + ' NOK';
 			productAddToCartButton.textContent = 'Add to Cart';
 			
+			// Append the elements to the product item
 			product.appendChild(productImage);
 			productImage.appendChild(productImg);
 			product.appendChild(productInformation);
@@ -72,6 +83,13 @@ export default async function PatternProducts() {
 			attachAddToCartListeners(); 
 		}
 		
+		/**
+		* Attach event listeners to the "Add to Cart" buttons of the products.
+		* 
+		* This function removes any existing event listeners and then adds a new event listener to each "Add to Cart" button to handle the button click event.
+		* I have to attach the add to cart buttons again after re-rendering the page for filtered patterns. If not, the add to cart buttons would not work.
+		* @todo Add the same event listner for all buttons on every rendering of the pattern page.
+		*/
 		function attachAddToCartListeners() {
 			const addToCartButtons = document.querySelectorAll('.products__product-add-to-cart');
 			addToCartButtons.forEach(button => {
@@ -85,6 +103,12 @@ export default async function PatternProducts() {
 			attachAddToCartListeners();
 		}
 		
+		/**
+		* Render filtered patterns based on selected age group, difficulty, and category
+		* @param {string} selectedAgeGroup - The selected age group filter value
+		* @param {string} selectedDifficulty - The selected difficulty filter value
+		* @param {string} selectedCategory - The selected category filter value
+		*/
 		function renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory) {
 			let filteredPatterns = patterns;
 			
@@ -149,8 +173,9 @@ export default async function PatternProducts() {
 	* 
 	* The cart is rendering after PatternProducts because it is an asynchronous function.
 	* The rendering of the cart happens befor the cart items are retrieved from local storage.
-	* @TODO Move render logic for cart items into a separate file  .
-	* 
+	* @TODO Move render, localstorage and addToCart functions into separate Java Script files.
+	* @TODO Add images to cart-box. Add functionality to remove single items.
+	*
 	*/
 	
 	let cartProducts = getCartItemsLocally();
