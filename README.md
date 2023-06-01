@@ -4,10 +4,12 @@
 
 Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting and to get inspired! You can also buy pattern to knit your own amazing clothes!
 
-## Website URL
+## Deployment
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
 <p>
 The source code can be located at https://github.com/Madsemilf/knitbycamilla
+<p>
+Github project can be found at https://github.com/users/Madsemilf/projects/4
 
 ## Features
 Browse a collection of hand-knit creations, including scarves, hats, and sweaters.
