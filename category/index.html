@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>knitByCamilla's Pattern page</title>
+	<meta name="description" content="This is knitByCamilla">
+	<meta name="theme-color" content="">
+	
+	<link rel="icon" href="/_app/assets/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	
+	<link rel="stylesheet" href="/_app/css/main.css">
+	<script type="module" src="/_app/js/main.js"></script>
+</head>
+
+	<body class="product-page">
+		<main>
+			<!-- Header section -->
+			<header class="grid header">
+				<div class="grid__column--6 header__logo-container">
+					<a href="/index.html" class="header__logo">
+						<h1 class="header__logo-text">knitByCamilla</h1>
+						<p class="header__logo-slogan">stitching dreams</p>
+					</a>
+				</div>
+				
+				<!-- Navigation -->
+				<nav class="grid__column--6 header__navigation">
+					<div class="navigation__dropdown">
+						<a href="/pattern/index.html" class="navigation__pattern-link">
+							<div class="navigation__pattern-icon">
+								<i class="fas fa-book"></i>
+							</div>
+							<div class="navigation__pattern-text">
+								<span>PATTERN</span>
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</a>
+						<ul class="navigation__dropdown-pattern">
+							<li><a href="/pattern/jackets.html">Jackets</a></li>
+							<li><a href="/pattern/sweaters.html">Sweaters</a></li>
+							<li><a href="/pattern/vests.html">Vests</a></li>
+							<li><a href="/pattern/accessories.html">Accessories</a></li>
+						</ul> 
+						<a href="/">
+							<i class="fas fa-tshirt"></i> 
+							<span>SHOP</span> 
+						</a>
+						<a href="/">
+							<i class="fas fa-lightbulb"></i>
+							<span>INSPIRATION</span> 
+						</a>
+						<a href="/">
+							<i class="fas fa-sign-in-alt"></i>
+							<span>ACCOUNT</span> 
+						</a>
+						<button id="navigation-cart-button" class="navigation__cart-button">
+							<i class="fas fa-shopping-cart"></i>
+							<span class="navigation__cart-count navigation__cart-no-items">0</span>
+							<span>CART</span>
+						</button>
+					</div>
+				</nav>
+			</header>
+			
+			<!-- Cart box -->
+			<section class="cart-box cart-box--hide cart-box--empty" id="cart-box">
+				<div class="cart-box__content">
+					<!-- cart items inserted from patternProducts.js -->
+					<!-- cart box inserted from showCart.js -->
+					
+					<!-- <div class="cart-box__items" id="cart-items">
+						<div>1</div>
+						<div>Cumulus sweater</div>
+						<div>100 NOK</div>
+					</div>
+					
+					<div class="cart-box__items" id="cart-items">
+						<div>1</div>
+						<div>Cumulus sweater</div>
+						<div>100 NOK</div>
+					</div> -->
+					
+					<div class="cart-box__empty-message--visible" id="cart-empty-message">
+						Your cart is empty
+					</div>
+				</div>
+				<!-- cart total quantity and price inserted from patternProducts.js -->
+				<div class="cart-box__buttons">
+					<button class="cart-box__button--checkout">checkout</button>
+					<button class="cart-box__button--empty">empty cart</button> 
+				</div>
+			</section>
+			
+			
+			<!-- Category section -->
+			<section class="category grid" id="pattern-category">
+				<!-- Category inserted from patternProducts.js -->
+			</section>
+		
+			</main>
+		</body>
+	</html>
