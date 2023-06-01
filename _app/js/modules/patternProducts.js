@@ -119,6 +119,12 @@ export default async function PatternProducts() {
 			
 			renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory);
 		 }
+		 const selectAge = document.getElementById('select__age');
+		 const selectDifficulty = document.getElementById('select__difficulty');
+		 const selectCategory = document.getElementById('select__category');
+		 selectAge.addEventListener('change', handleFiltersChange);
+		 selectDifficulty.addEventListener('change', handleFiltersChange);
+		 selectCategory.addEventListener('change', handleFiltersChange);
 		function render() {
 			// insertPatternItemsTheWrongWay();
 			insertPatternItems();
