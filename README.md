@@ -1,4 +1,8 @@
-# **Knit By Camilla Webshop**
+# 
+<p align="center">
+  <u><strong>Knit By Camilla Webshop</strong></u>
+</p>
+
 Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting projects and provide information about her work.
 
 ## Website URL
