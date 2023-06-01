@@ -2,7 +2,7 @@
   Knit By Camilla Webshop
 </h1>
 
-Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting projects and provide information about her work.
+Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations by Camilla. This website serves as a portfolio to display Camilla's knitting and to get inspired! You can also buy pattern to knit your own amazing clothes!
 
 ## Website URL
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
