@@ -213,7 +213,6 @@ export default async function PatternProducts() {
 	
 	function emptyCart() {
 		cartProducts = [];
-		
 		storeCartItemsLocally();
 	}
 	
