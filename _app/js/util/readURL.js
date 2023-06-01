@@ -1,4 +1,9 @@
 export function readURL() {
+	
+	/**
+	 * Extracts a slug from the current URL's query string.
+	 * @returns {string | undefined} The extracted slug or undefined if not found.
+	 */
 	const allURL = window.location.href;
 
 	if (allURL.includes('')) {
