@@ -5,34 +5,41 @@ export default async function FrontpageInformationImage () {
 	const query = `*[_type == 'pattern'] {
 		Image {
 			..., asset ->
-
-    	}
-  	}`;
- 
-	const patterns = await sanity.fetch(query);
-
-	if (document.body.classList.contains('home-page')) {
+			
+		}
+	}`;
 	
-		// Randomly select one pattern
+	const patterns = await sanity.fetch(query);
+	
+	if (document.body.classList.contains('home-page')) {
+		
 		const selectedPattern = getRandomElement(patterns, 1);
-
+		
 		function getRandomElement(array, count) {
 			const shuffledPatterns = array.sort(() => 0.5 - Math.random());
 			return shuffledPatterns.slice(0, count);
 		}
-
+		
 		function createInformationImageDOM(pattern) {
-		return `<div class="grid__column--6 frontpage-information-image">
-			<img src="${pattern.Image.asset.url}" alt="Picture of different knitted products">
-		</div>`;
+			const informationImageItem = document.createElement('div');
+			const informationImage = document.createElement('img');
+			
+			informationImageItem.classList.add('grid__column--6', 'frontpage-information-image');
+			
+			informationImage.src = pattern.Image.asset.url;
+			informationImage.alt = 'Picture of different knitted products';
+			
+			informationImageItem.appendChild(informationImage);
+			return informationImageItem;
 		}
-
-		function renderInformationImage () {
+		
+		function renderInformationImage() {
 			for (const pattern of selectedPattern) {
 				const patternImageItem = createInformationImageDOM(pattern);
-				informationImageContainer.innerHTML += patternImageItem;
+				informationImageContainer.appendChild(patternImageItem);
 			}
 		}
+		
 		renderInformationImage();
 	}
 }
