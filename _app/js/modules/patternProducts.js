@@ -8,7 +8,8 @@ export default async function PatternProducts() {
 
 	if (document.body.classList.contains('product-page')) {
 
-	if (document.getElementById('pattern-products')) {
+		const patterns = await fetchPatterns();
+		renderAllPatterns();
 	
 		function createPatternItemDOM(pattern_document) {
 		const product = document.createElement('div');
