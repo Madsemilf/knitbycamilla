@@ -20,34 +20,48 @@
 		<!-- Header section -->
 		<header class="grid header">
 			<div class="grid__column--6 header__logo-container">
-				<a href="index.html" class="header__logo">
+				<a href="/index.html" class="header__logo">
 					<h1 class="header__logo-text">knitByCamilla</h1>
 					<p class="header__logo-slogan">stitching dreams</p>
 				</a>
 			</div>
+			
 			<!-- Navigation -->
 			<nav class="grid__column--6 header__navigation">
-				<a href="/">
-					<i class="fas fa-book"></i>
-					<span>RECEPIES</span>
-				</a>
-				<a href="/">
-					<i class="fas fa-tshirt"></i> 
-					<span>STORE</span> 
-				</a>
-				<a href="/">
-					<i class="fas fa-lightbulb"></i>
-					<span>INSPIRATION</span> 
-				</a>
-				<a href="/">
-					<i class="fas fa-sign-in-alt"></i>
-					<span>SIGN IN</span> 
-				</a>
-				<a href="/" id="navigation__cart-link" class="navigation__cart-link navigation__cart--empty">
-					<i class="fas fa-shopping-cart"></i>
-					<span class="navigation__cart-count navigation__cart-no-items">0</span>
-					<span>CART</span>
-				</a>
+				<div class="navigation__dropdown">
+					<a href="/pattern/index.html" class="navigation__pattern-link">
+						<div class="navigation__pattern-icon">
+							<i class="fas fa-book"></i>
+						</div>
+						<div class="navigation__pattern-text">
+							<span>PATTERN</span>
+							<i class="fas fa-chevron-down"></i>
+						</div>
+					</a>
+					<ul class="navigation__dropdown-pattern">
+						<li><a href="/pattern/jackets.html">Jackets</a></li>
+						<li><a href="/pattern/sweaters.html">Sweaters</a></li>
+						<li><a href="/pattern/vests.html">Vests</a></li>
+						<li><a href="/pattern/accessories.html">Accessories</a></li>
+					</ul> 
+					<a href="/">
+						<i class="fas fa-tshirt"></i> 
+						<span>SHOP</span> 
+					</a>
+					<a href="/inspiration/index.html">
+						<i class="fas fa-lightbulb"></i>
+						<span>INSPIRATION</span> 
+					</a>
+					<a href="/login/index.html">
+						<i class="fas fa-sign-in-alt"></i>
+						<span>ACCOUNT</span> 
+					</a>
+					<button id="navigation-cart-button" class="navigation__cart-button">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="navigation__cart-count navigation__cart-no-items">0</span>
+						<span>CART</span>
+					</button>
+				</div>
 			</nav>
 		</header>
 
@@ -72,7 +86,7 @@
 			<div class="signup-input">
 				<button class="signup-button" type="submit">Sign Up</button>
 			</div>
-			<p class="signup-account">Already have an account? <a href="login.html">Click here to log in</a></p>
+			<p class="signup-account">Already have an account? <a href="/login/index.html">Click here to log in</a></p>
 		  </form>
 		</section>
 
