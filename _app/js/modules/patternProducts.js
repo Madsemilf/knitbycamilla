@@ -14,40 +14,39 @@ export default async function PatternProducts() {
 		
 		function createPatternItemDOM(pattern_document) {
 			const product = document.createElement('div');
+			const productImage = document.createElement('div');
+			const productImg = document.createElement('img');
+			const productInformation = document.createElement('div');
+			const productName = document.createElement('div');
+			const productPrice = document.createElement('div');
+			const productAddToCartButton = document.createElement('button');
+
 			product.classList.add('products__product', 'box', 'grid__column--3');
+			productImage.classList.add('products__product-image');
+			productImg.classList.add('products__product-img');
+			productInformation.classList.add('products__product-information');
+			productName.classList.add('frontpage-products__product-name');
+			productPrice.classList.add('products__product-price');
+			productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
+
 			product.setAttribute('data-id', pattern_document._id);
 			product.setAttribute('data-name', pattern_document.name);
 			product.setAttribute('data-price', pattern_document.price);
-			
-			const productImage = document.createElement('div');
-			productImage.classList.add('products__product-image');
-			product.appendChild(productImage);
-			
-			const productImg = document.createElement('img');
-			productImg.classList.add('products__product-img');
+
 			productImg.src = `${pattern_document.Image.asset.url}`;
 			productImg.alt = `${product.name};`
-			productImage.appendChild(productImg);
 			
-			const productInformation = document.createElement('div');
-			productInformation.classList.add('products__product-information');
-			product.appendChild(productInformation);
-			
-			const productName = document.createElement('div');
-			productName.classList.add('frontpage-products__product-name');
 			productName.textContent = pattern_document.name;
-			productInformation.appendChild(productName);
-			
-			const productPrice = document.createElement('div');
-			productPrice.classList.add('products__product-price');
 			productPrice.textContent = pattern_document.price + ' NOK';
-			productInformation.appendChild(productPrice);
-			
-			const productAddToCartButton = document.createElement('button');
-			productAddToCartButton.classList.add('products__product-add-to-cart', 'input-button');
 			productAddToCartButton.textContent = 'Add to Cart';
-			product.appendChild(productAddToCartButton);
 			
+			product.appendChild(productImage);
+			productImage.appendChild(productImg);
+			product.appendChild(productInformation);
+			productInformation.appendChild(productName);
+			productInformation.appendChild(productPrice);
+			product.appendChild(productAddToCartButton);
+		
 			return product;
 		}		
 		
@@ -59,11 +58,7 @@ export default async function PatternProducts() {
 				patternsContainer.appendChild(patternItem);
 			}
 		}
-		
-		
-		
-		
-		
+	
 		function insertFilteredPatternItems(ageGroup, difficulty, category) {
 			let filteredPatterns = filterPatterns(patterns, ageGroup, difficulty, category);
 			insertPatternItems(filteredPatterns);
@@ -218,19 +213,19 @@ export default async function PatternProducts() {
 	
 	function createCartItemDOM(product) {
 		const cartItem = document.createElement('div');
-		cartItem.classList.add('cart-box__item');
-		
 		const quantity = document.createElement('div');
-		quantity.textContent = product.quantity;
-		cartItem.appendChild(quantity);
-		
 		const name = document.createElement('div');
-		name.textContent = product.name;
-		cartItem.appendChild(name);
-		
 		const price = document.createElement('div');
+
+		cartItem.classList.add('cart-box__item');
 		price.classList.add('cart-box__item-price');
+		
+		quantity.textContent = product.quantity;
+		name.textContent = product.name;
 		price.textContent = product.price;
+
+		cartItem.appendChild(quantity);
+		cartItem.appendChild(name);
 		cartItem.appendChild(price);
 		
 		return cartItem;
