@@ -109,6 +109,16 @@ export default async function PatternProducts() {
 			attachAddToCartListeners(); 
 		 }
 	
+		 function handleFiltersChange() {
+			const selectAge = document.getElementById('select__age');
+			const selectDifficulty = document.getElementById('select__difficulty');
+			const selectCategory = document.getElementById('select__category');
+			const selectedAgeGroup = selectAge.value;
+			const selectedDifficulty = selectDifficulty.value;
+			const selectedCategory = selectCategory.value;
+			
+			renderFilteredPatterns(selectedAgeGroup, selectedDifficulty, selectedCategory);
+		 }
 		function render() {
 			// insertPatternItemsTheWrongWay();
 			insertPatternItems();
