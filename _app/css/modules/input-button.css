@@ -1,10 +1,19 @@
 .input-button {
-	background: var(--color-highlight);
+	background: var(--color-foreground);
 	text-align: center;
 	width: 100%;
 	padding: var(--gap-button-padding);
 }
 
 .input-button:hover {
-	background: var(--color-background);
+	background: black;
+	color: white;
 }
+
+@media (max-width: 768px) {
+	.input-button:hover,
+	.input-button:active {
+	  background: var(--color-foreground); /* Use the initial background color */
+	  color: initial; /* Use the initial text color */
+	}
+ }
