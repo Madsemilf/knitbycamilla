@@ -16,171 +16,175 @@
 </head>
 
 	<body class="product-page">
-		<!-- Header section -->
-		<header class="grid header">
-			<div class="grid__column--6 header__logo-container">
-				<a href="/index.html" class="header__logo">
-					<h1 class="header__logo-text">knitByCamilla</h1>
-					<p class="header__logo-slogan">stitching dreams</p>
-				</a>
-			</div>
-			
-			<!-- Navigation -->
-			<nav class="grid__column--6 header__navigation">
-				<div class="navigation__dropdown">
-					<a href="/pattern/index.html" class="navigation__pattern-link">
-						<div class="navigation__pattern-icon">
-							<i class="fas fa-book"></i>
-						</div>
-						<div class="navigation__pattern-text">
-							<span>PATTERN</span>
-							<i class="fas fa-chevron-down"></i>
-						</div>
+		<main>
+			<!-- Header section -->
+			<header class="grid header">
+				<div class="grid__column--6 header__logo-container">
+					<a href="/index.html" class="header__logo">
+						<h1 class="header__logo-text">knitByCamilla</h1>
+						<p class="header__logo-slogan">stitching dreams</p>
 					</a>
-					<ul class="navigation__dropdown-pattern">
-						<li><a href="/pattern/jackets.html">Jackets</a></li>
-						<li><a href="/pattern/sweaters.html">Sweaters</a></li>
-						<li><a href="/pattern/vests.html">Vests</a></li>
-						<li><a href="/pattern/accessories.html">Accessories</a></li>
-					</ul> 
-					<a href="/">
-						<i class="fas fa-tshirt"></i> 
-						<span>SHOP</span> 
-					</a>
-					<a href="/">
-						<i class="fas fa-lightbulb"></i>
-						<span>INSPIRATION</span> 
-					</a>
-					<a href="/">
-						<i class="fas fa-sign-in-alt"></i>
-						<span>ACCOUNT</span> 
-					</a>
-					<button id="navigation-cart-button" class="navigation__cart-button">
-						<i class="fas fa-shopping-cart"></i>
-						<span class="navigation__cart-count navigation__cart-no-items">0</span>
-						<span>CART</span>
-					</button>
-				</div>
-			</nav>
-		</header>
-		
-		<!-- Cart box -->
-		<section class="cart-box cart-box--hide cart-box--empty" id="cart-box">
-			<div class="cart-box__content">
-				<!-- cart items inserted from main-cart.js -->
-				
-				<!-- <div class="cart-box__items" id="cart-items">
-					<div>1</div>
-					<div>Cumulus sweater</div>
-					<div>100 NOK</div>
 				</div>
 				
-				<div class="cart-box__items" id="cart-items">
-					<div>1</div>
-					<div>Cumulus sweater</div>
-					<div>100 NOK</div>
-				</div> -->
-				
-				<div class="cart-box__empty-message--visible" id="cart-empty-message">
-					Your cart is empty
-				</div>
-			</div>
-			<!-- cart total quantity and price inserted from main-cart.js -->
-			<div class="cart-box__buttons">
-				<button class="cart-box__button--checkout">checkout</button>
-				<button class="cart-box__button--empty">empty cart</button> 
-			</div>
-		</section>
-		
-		
-		<!-- Hero title -->
-		<section class="hero-title grid">
-			<div class="grid__column--12">
-				<h1>FIND SOMETHING YOU WOULD LOVE TO KNIT. JOIN US IN CREATING A KNITTING WORLD!</h1>
-			</div>
-		</section>
-		
-		<section class="pattern-select"> 
-			<label name="select__age" for="select__age">Age:</label>
+				<!-- Navigation -->
+				<nav class="grid__column--6 header__navigation">
+					<div class="navigation__dropdown">
+						<a href="/pattern/index.html" class="navigation__pattern-link">
+							<div class="navigation__pattern-icon">
+								<i class="fas fa-book"></i>
+							</div>
+							<div class="navigation__pattern-text">
+								<span>PATTERN</span>
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</a>
+						<ul class="navigation__dropdown-pattern">
+							<li><a href="/pattern/jackets.html">Jackets</a></li>
+							<li><a href="/pattern/sweaters.html">Sweaters</a></li>
+							<li><a href="/pattern/vests.html">Vests</a></li>
+							<li><a href="/pattern/accessories.html">Accessories</a></li>
+						</ul> 
+						<a href="/">
+							<i class="fas fa-tshirt"></i> 
+							<span>SHOP</span> 
+						</a>
+						<a href="/">
+							<i class="fas fa-lightbulb"></i>
+							<span>INSPIRATION</span> 
+						</a>
+						<a href="/">
+							<i class="fas fa-sign-in-alt"></i>
+							<span>ACCOUNT</span> 
+						</a>
+						<button id="navigation-cart-button" class="navigation__cart-button">
+							<i class="fas fa-shopping-cart"></i>
+							<span class="navigation__cart-count navigation__cart-no-items">0</span>
+							<span>CART</span>
+						</button>
+					</div>
+				</nav>
+			</header>
 			
-			<select id="select__age">
-				<option value="">All</option>
-				<option value="select__age-adult">Adult</option>
-				<option value="select__age-child">Child</option>
-			</select>
-			
-			<label for="select__category">Category:</label>
-			
-			<select name="select__category" id="select__category">
-				<option value="">All</option>
-				<option value="select__category-sweaters">Sweaters</option>
-				<option value="select__category-jackets">Jackets</option>
-				<option value="select__category-vests">Vests</option>
-				<option value="select__category-accessories">Accessories</option>
-			</select>
-			
-			<label for="select__difficulty">Difficulty:</label>
-			
-			<select name="select__difficulty" id="select__difficulty">
-				<option value="">All</option>
-				<option value="select__difficulty-beginner">Beginner</option>
-				<option value="select__difficulty-intermediate">Intermediate</option>
-				<option value="select__difficulty-advanced">Advanced</option>
-			</select>
-		</section>
-		
-		<!-- Product section -->
-		<section class="products grid" id="pattern-products">
-			<!-- <div class="products__product box grid__column--4" data-id="${product_document._id}" data-name="${product_document.name}" data-price="${product_document.price}">
-				<div class="products__product-image">
-					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
-				</div>
-				
-				<div class="products__product-information">
-					<div class="products__product-name">Cumulus Bluse </div>
-					<div class="products__product-price">100 NOK</div>
-				</div>
-				
-				<button class="products__product-add-to-cart input-button">Add to Cart</button>
-			</div>
-			
-			<div class="products__product box grid__column--4">
-				<div class="products__product-image">
-					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
-				</div>
-				
-				<div class="products__product-information">
-					<div class="products__product-name">Cumulus Bluse </div>
-					<div class="products__product-price">100 NOK</div>
-				</div>
-				
-				<button class="products__product-add-to-cart input-button">Add to Cart</button>
-			</div>
-			
-			<div class="products__product box grid__column--4">
-				<div class="products__product-image">
-					<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
-				</div>
-				
-				<div class="products__product-information">
-					<div class="products__product-name">Cumulus Bluse </div>
-					<div class="products__product-price">100 NOK</div>
-				</div>
-				
-				<button class="products__product-add-to-cart input-button">Add to Cart</button>
-			</div> -->
-		</section>
-		
-		<!-- Footer section
-			<footer class="grid footer">
-				<div class="grid__column--12 footer-container">
-					<p class="footer-text">Follow <b>KnitByCamilla</b> on</p>
-					<div class="footer-icons">
-						<a href="#"><i class="fab fa-tiktok"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-facebook"></i></a>
+			<!-- Cart box -->
+			<section class="cart-box cart-box--hide cart-box--empty" id="cart-box">
+				<div class="cart-box__content">
+					<!-- cart items inserted from main-cart.js -->
+					
+					<!-- <div class="cart-box__items" id="cart-items">
+						<div>1</div>
+						<div>Cumulus sweater</div>
+						<div>100 NOK</div>
+					</div>
+					
+					<div class="cart-box__items" id="cart-items">
+						<div>1</div>
+						<div>Cumulus sweater</div>
+						<div>100 NOK</div>
+					</div> -->
+					
+					<div class="cart-box__empty-message--visible" id="cart-empty-message">
+						Your cart is empty
 					</div>
 				</div>
-			</footer> -->
+				<!-- cart total quantity and price inserted from main-cart.js -->
+				<div class="cart-box__buttons">
+					<button class="cart-box__button--checkout">checkout</button>
+					<button class="cart-box__button--empty">empty cart</button> 
+				</div>
+			</section>
+			
+			
+			<!-- Hero title -->
+			<section class="hero-title grid">
+				<div class="grid__column--12">
+					<h1>FIND SOMETHING YOU WOULD LOVE TO KNIT. JOIN US IN CREATING A KNITTING WORLD!</h1>
+				</div>
+			</section>
+			
+			<section class="pattern-select"> 
+				<label name="select__age" for="select__age">Age:</label>
+				
+				<select id="select__age">
+					<option value="">All</option>
+					<option value="select__age-adult">Adult</option>
+					<option value="select__age-child">Child</option>
+				</select>
+				
+				<label for="select__category">Category:</label>
+				
+				<select name="select__category" id="select__category">
+					<option value="">All</option>
+					<option value="select__category-sweaters">Sweaters</option>
+					<option value="select__category-jackets">Jackets</option>
+					<option value="select__category-vests">Vests</option>
+					<option value="select__category-accessories">Accessories</option>
+				</select>
+				
+				<label for="select__difficulty">Difficulty:</label>
+				
+				<select name="select__difficulty" id="select__difficulty">
+					<option value="">All</option>
+					<option value="select__difficulty-beginner">Beginner</option>
+					<option value="select__difficulty-intermediate">Intermediate</option>
+					<option value="select__difficulty-advanced">Advanced</option>
+				</select>
+			</section>
+			
+			<!-- Product section -->
+			<section class="products grid" id="pattern-products">
+				<!-- patterns inserted from patternProducts.js -->
+
+				<!-- <div class="products__product box grid__column--4" data-id="${product_document._id}" data-name="${product_document.name}" data-price="${product_document.price}">
+					<div class="products__product-image">
+						<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
+					</div>
+					
+					<div class="products__product-information">
+						<div class="products__product-name">Cumulus Bluse </div>
+						<div class="products__product-price">100 NOK</div>
+					</div>
+					
+					<button class="products__product-add-to-cart input-button">Add to Cart</button>
+				</div>
+				
+				<div class="products__product box grid__column--4">
+					<div class="products__product-image">
+						<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
+					</div>
+					
+					<div class="products__product-information">
+						<div class="products__product-name">Cumulus Bluse </div>
+						<div class="products__product-price">100 NOK</div>
+					</div>
+					
+					<button class="products__product-add-to-cart input-button">Add to Cart</button>
+				</div>
+				
+				<div class="products__product box grid__column--4">
+					<div class="products__product-image">
+						<img class="products__product-img" src="/_app/assets/images/category_accessories.jpeg" alt="">
+					</div>
+					
+					<div class="products__product-information">
+						<div class="products__product-name">Cumulus Bluse </div>
+						<div class="products__product-price">100 NOK</div>
+					</div>
+					
+					<button class="products__product-add-to-cart input-button">Add to Cart</button>
+				</div> -->
+			</section>
+			
+			<!-- Footer section
+				<footer class="grid footer">
+					<div class="grid__column--12 footer-container">
+						<p class="footer-text">Follow <b>KnitByCamilla</b> on</p>
+						<div class="footer-icons">
+							<a href="#"><i class="fab fa-tiktok"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-facebook"></i></a>
+						</div>
+					</div>
+				</footer> -->
+			</main>
 		</body>
 	</html>
