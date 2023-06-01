@@ -1,3 +1,12 @@
+/**
+ * Filter the patterns based on the given criteria.
+ * @param {Array} patterns - The array of patterns to filter.
+ * @param {string} ageGroup - The age group to filter by.
+ * @param {string} difficulty - The difficulty level to filter by.
+ * @param {string} category - The category slug to filter by.
+ * @returns {Array} - The filtered array of patterns.
+ */
+
 export function filterPatterns(patterns, ageGroup, difficulty, category) {
 	let filteredPatterns = patterns;
 
