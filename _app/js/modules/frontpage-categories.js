@@ -12,8 +12,6 @@ export default async function FrontpageCategories () {
 
 	const categories = await sanity.fetch(query);
 
-	console.log(categories);
-
 	if (document.body.classList.contains('home-page')) {
 		function createCategoryImageDOM(category) {
 
