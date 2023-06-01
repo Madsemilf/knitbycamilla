@@ -6,6 +6,7 @@ Welcome to Knit By Camilla, a website showcasing beautiful hand-knit creations b
 
 ## Website URL
 The live version of the website can be accessed at https://knitbycamilla.netlify.app/.
+<p>
 The source code can be located at https://github.com/Madsemilf/knitbycamilla
 
 ## Features
