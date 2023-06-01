@@ -74,7 +74,7 @@
 		width: 50%;
 		font-size: 10px;
 	}
-
+	
 	.cart-box__item {
 		font-size: 1.5vh;
 	}
@@ -83,7 +83,7 @@
 		font-size: 15px;
 		text-align: left;
 	}
-
+	
 	.cart-box__button--checkout:hover {
 		background-color: var(--color-highlight);
 	}
@@ -91,7 +91,7 @@
 	.cart-box__button--empty:hover {
 		background-color: var(--color-highlight);
 	}
-
+	
 }
 
 @media (min-width: 1920px) {

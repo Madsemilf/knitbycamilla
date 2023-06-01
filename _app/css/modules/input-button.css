@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
 	.input-button:hover,
 	.input-button:active {
-	  background: var(--color-foreground); /* Use the initial background color */
-	  color: initial; /* Use the initial text color */
+		background: var(--color-foreground); /* Use the initial background color */
+		color: initial; /* Use the initial text color */
 	}
- }
+}

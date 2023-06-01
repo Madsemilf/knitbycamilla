@@ -63,7 +63,7 @@ export default function CartItems() {
 	
 	function emptyCart() {
 		cartProducts = [];
-
+		
 		storeCartItemsLocally();
 	}
 	
@@ -90,49 +90,49 @@ export default function CartItems() {
 	// Clear the cart items before rendering. 
 	// Checks how many items are in the cart. Runs message if empty.
 	// Iterate over products in the cart, and calculates total price.
-
+	
 	function render() {
 		cartBoxContent.innerHTML = ''; 
 		let totalQuantity = 0;
 		let totalPrice = 0;
-	 
+		
 		if (cartProducts.length > 0) {
-		  emptyCartMessage.classList.remove('cart-box__empty-message--visible');
-		  cartProducts.forEach(product => {
-			 const cartItem = createCartItemDOM(product);
-			 cartBoxContent.appendChild(cartItem);
-			 totalQuantity += product.quantity;
-			 totalPrice += product.quantity * product.price;
-		  });
+			emptyCartMessage.classList.remove('cart-box__empty-message--visible');
+			cartProducts.forEach(product => {
+				const cartItem = createCartItemDOM(product);
+				cartBoxContent.appendChild(cartItem);
+				totalQuantity += product.quantity;
+				totalPrice += product.quantity * product.price;
+			});
 		} else {
-		  emptyCartMessage.classList.add('cart-box__empty-message--visible');
+			emptyCartMessage.classList.add('cart-box__empty-message--visible');
 		}
-	 
+		
 		// Adds a total quantity and total price in NOK at bottom of box content
 		cartTotalContainer.classList.add('cart-box__total');
 		cartTotalContainer.textContent = `Total Quantity: ${totalQuantity}, Total Price: ${totalPrice} NOK`;
 		cartBoxContent.appendChild(cartTotalContainer);
-
-
+		
+		
 		// Updates the cart counter = total quantity.
 		cartCountElement.textContent = totalQuantity;
-	 }
-
-	 function storeCartItemsLocally() {
+	}
+	
+	function storeCartItemsLocally() {
 		const key = 'cart-items';
 		const value = JSON.stringify(cartProducts);
 		window.localStorage.setItem(key, value);
-	 }
-  
-	 function getCartItemsLocally() {
+	}
+	
+	function getCartItemsLocally() {
 		const key = 'cart-items';
 		const cartItemsAsString = window.localStorage.getItem(key);
-  
+		
 		if (cartItemsAsString) {
-		  return JSON.parse(cartItemsAsString);
+			return JSON.parse(cartItemsAsString);
 		} else {
-		  return [];
+			return [];
 		}
-	 }
-	 render() 
+	}
+	render() 
 }

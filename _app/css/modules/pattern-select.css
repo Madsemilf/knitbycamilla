@@ -3,36 +3,36 @@
 	align-items: center;
 	padding: var(--gap-padding);
 	gap: 0.5rem;
- }
- 
- .pattern-select label {
+}
+
+.pattern-select label {
 	margin-right: 10px;
- }
- 
- .pattern-select select {
+}
+
+.pattern-select select {
 	padding: 8px;
 	border-radius: 4px;
 	background-color: #FDF7C3;
 	border: 1px solid #333;
- }
- 
- .pattern-select select option:checked {
-	font-weight: bold;
- }
- 
- .pattern-select label {
-	margin-right: 10px;
- }
- 
- .pattern-select select {
-	margin-right: 10px;
- }
+}
 
- @media (max-width: 768px) {
+.pattern-select select option:checked {
+	font-weight: bold;
+}
+
+.pattern-select label {
+	margin-right: 10px;
+}
+
+.pattern-select select {
+	margin-right: 10px;
+}
+
+@media (max-width: 768px) {
 	.pattern-select {
 		font-size: 2vh;
 		flex-direction: column;
 		align-items: flex-end;
 		flex-wrap: wrap;
-	 }
+	}
 }

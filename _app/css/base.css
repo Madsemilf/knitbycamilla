@@ -17,9 +17,9 @@ a span:hover {
 
 .frontpage-split-line {
 	border: none;
-   border-top: 1px dotted rgb(54, 53, 53);
+	border-top: 1px dotted rgb(54, 53, 53);
 	padding: 2rem;
-   
+	
 }
 
 @media (max-width: 1024px) {

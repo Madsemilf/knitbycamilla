@@ -44,10 +44,6 @@
 	text-decoration: underline;
 }
 
-/* .frontpage-information-image {
-	height: 100%;
-} */
-
 .frontpage-information-image img {
 	object-fit: cover;
 	aspect-ratio: 1/1;

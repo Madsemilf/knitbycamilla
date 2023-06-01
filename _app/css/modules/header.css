@@ -122,10 +122,10 @@
 
 .navigation__pattern-link:hover + .navigation__dropdown-pattern,
 .navigation__dropdown-pattern:hover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .navigation__dropdown-pattern li {
@@ -202,7 +202,7 @@
 		justify-content: space-between;
 		gap: 1.2rem;
 	}
-
+	
 	.navigation__pattern-link {
 		top: 0px;
 		left: 0px;
