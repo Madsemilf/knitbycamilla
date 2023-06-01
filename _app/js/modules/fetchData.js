@@ -10,17 +10,19 @@ export default async function fetchPatterns() {
 			..., 
 			'slug': slug.current
 		},
-   	difficulty,
-    	agegroup
+		difficulty,
+		agegroup
 	}`;
 	
 	const patterns = await sanity.fetch(query);
+	
 	console.log(patterns);
 	for (const pattern of patterns) {
+		console.log(pattern.slug.current)
 		const category = pattern.category;
-		console.log(category.name); // Output: Category name
-		console.log(category.slug); // Output: Category slug
-		// Access other category properties as needed
-	 }
-	return patterns;
+		console.log(category.name); 
+		console.log(category.slug.current); 
+		
+		return patterns;
+	}
 }
