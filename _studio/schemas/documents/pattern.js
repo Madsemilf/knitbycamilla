@@ -14,7 +14,6 @@ export default {
 			type: 'slug',
 			options: {
 				source: 'name',
-				slugify: input => input.toLowerCase().replace(/\s+/g, '-'),
 			}
 		},
 		{
@@ -63,10 +62,7 @@ export default {
 		{
 			title: 'Image',
 			name: 'image',
-			type: 'image',
-			options: {
-			  hotspot: true,
-			}
+			type: 'image'
 		},	
 	]
 }
