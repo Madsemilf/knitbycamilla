@@ -1,4 +1,4 @@
-export function readURL() {
+export function getURL() {
 	
 	/**
 	 * Extracts a slug from the current URL's query string.
