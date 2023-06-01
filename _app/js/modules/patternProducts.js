@@ -125,6 +125,7 @@ export default async function PatternProducts() {
 		 selectAge.addEventListener('change', handleFiltersChange);
 		 selectDifficulty.addEventListener('change', handleFiltersChange);
 		 selectCategory.addEventListener('change', handleFiltersChange);
+		 renderAllPatterns();
 		function render() {
 			// insertPatternItemsTheWrongWay();
 			insertPatternItems();
