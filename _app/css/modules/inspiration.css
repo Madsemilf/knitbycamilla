@@ -44,12 +44,39 @@
 
 .inspiration-container:nth-child(even) .inspiration-image-container {
 	order: 2;
- }
- 
- .inspiration-container:nth-child(even) .inspiration-text-container {
+}
+
+.inspiration-container:nth-child(even) .inspiration-text-container {
 	order: 1;
- }
- 
- .inspiration-container:nth-child(even) .inspiration-text {
+}
+
+.inspiration-container:nth-child(even) .inspiration-text {
 	text-align: right;
- }
+}
+
+@media (max-width: 768px) {
+	.inspiration-container {
+		flex-direction: column;
+	}
+	
+	.inspiration-text-container {
+		padding: 5rem;
+	}
+	
+	.inspiration-text {
+		font-size: 3vh;
+	}
+	
+	.inspiration-container:nth-child(even) .inspiration-image-container {
+		order: 1;
+	}
+	
+	.inspiration-container:nth-child(even) .inspiration-text-container {
+		order: 2;
+		text-align: center;
+	}
+	
+	.inspiration-container:nth-child(even) .inspiration-text {
+		text-align: center;
+	}
+}
