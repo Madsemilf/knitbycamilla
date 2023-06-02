@@ -1,6 +1,7 @@
 .pattern-select {
 	display: flex;
 	align-items: center;
+	justify-content: end;
 	padding: var(--gap-padding);
 	gap: 0.5rem;
 }
